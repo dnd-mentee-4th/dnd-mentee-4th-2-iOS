@@ -6,7 +6,7 @@ iOS project for DND 4th project.
 * BackEnd: [박종혁](https://github.com/ParkJongHyuck), [주성민](https://github.com/god9599)
 * Design: 김민송, 정아영
 
-## Technical Stack
+## Technology Stack
 * Architecture: MVVM
 * language: Swift
 * Networking: Alamofire, RxSwift/RxCocoa
