@@ -10,6 +10,7 @@ PODS:
   - RxSwift (6.0.0)
   - RxTest (6.0.0):
     - RxSwift (= 6.0.0)
+  - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - RxCocoa (= 6.0.0)
   - RxSwift (= 6.0.0)
   - RxTest (= 6.0.0)
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
@@ -25,7 +27,8 @@ SPEC CHECKSUMS:
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
   RxTest: ddef4052e63cb116f5b73510488c3113c37c62e5
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 3822fef2721c76a47274742d04055ab1ee1a188a
+PODFILE CHECKSUM: 7ad564345433594a2557e9b7f11db035de2ff100
 
 COCOAPODS: 1.0.0
