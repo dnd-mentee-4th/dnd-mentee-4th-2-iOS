@@ -1,0 +1,10 @@
+disabled_rules:
+
+included:
+
+excluded:
+- Pods
+- EchoNoteTests
+- EchoNoteUITests
+- EchoNote/AppDelegate.swift
+- EchoNote/SceneDelegate.swift

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		63DFA20ABA7CEC37E1A50122 /* Pods_EchoNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C207C72D9B71641DD8411FC /* Pods_EchoNoteTests.framework */; };
+		EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE3C179B25BFC93900393597 /* .swiftlint.yml */; };
 		EE3D537525B298800064C274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537425B298800064C274 /* AppDelegate.swift */; };
 		EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537625B298800064C274 /* SceneDelegate.swift */; };
-		EE3D537925B298800064C274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537825B298800064C274 /* ViewController.swift */; };
-		EE3D537C25B298800064C274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3D537A25B298800064C274 /* Main.storyboard */; };
+		EE3D537925B298800064C274 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537825B298800064C274 /* MainViewController.swift */; };
 		EE3D537E25B298830064C274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3D537D25B298830064C274 /* Assets.xcassets */; };
 		EE3D538125B298830064C274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3D537F25B298830064C274 /* LaunchScreen.storyboard */; };
 		EE3D538C25B298830064C274 /* EchoNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D538B25B298830064C274 /* EchoNoteTests.swift */; };
@@ -43,11 +43,11 @@
 		9906CC763EBDE984BBCAE8B1 /* Pods-EchoNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchoNote/Pods-EchoNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D96B7501FB693DBD0705225A /* Pods-EchoNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchoNote/Pods-EchoNote.release.xcconfig"; sourceTree = "<group>"; };
 		DC5E6CE52E011A7A11BBD585 /* Pods_EchoNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EchoNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3C179B25BFC93900393597 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE3D537125B298800064C274 /* EchoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3D537425B298800064C274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE3D537625B298800064C274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE3D537825B298800064C274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE3D537B25B298800064C274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE3D537825B298800064C274 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE3D537D25B298830064C274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE3D538025B298830064C274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE3D538225B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		EE3D536825B298800064C274 = {
 			isa = PBXGroup;
 			children = (
+				EE3C179B25BFC93900393597 /* .swiftlint.yml */,
 				EE3D537325B298800064C274 /* EchoNote */,
 				EE3D538A25B298830064C274 /* EchoNoteTests */,
 				EE3D539525B298830064C274 /* EchoNoteUITests */,
@@ -124,8 +125,7 @@
 			children = (
 				EE3D537425B298800064C274 /* AppDelegate.swift */,
 				EE3D537625B298800064C274 /* SceneDelegate.swift */,
-				EE3D537825B298800064C274 /* ViewController.swift */,
-				EE3D537A25B298800064C274 /* Main.storyboard */,
+				EE3D537825B298800064C274 /* MainViewController.swift */,
 				EE3D537D25B298830064C274 /* Assets.xcassets */,
 				EE3D537F25B298830064C274 /* LaunchScreen.storyboard */,
 				EE3D538225B298830064C274 /* Info.plist */,
@@ -173,6 +173,7 @@
 				EE3D536F25B298800064C274 /* Resources */,
 				4A3271911E42330D0C2343F6 /* 📦 Embed Pods Frameworks */,
 				62462441EE967B9D8AA0306E /* 📦 Copy Pods Resources */,
+				EE3C179725BFC8AB00393597 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -269,9 +270,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */,
 				EE3D538125B298830064C274 /* LaunchScreen.storyboard in Resources */,
 				EE3D537E25B298830064C274 /* Assets.xcassets in Resources */,
-				EE3D537C25B298800064C274 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +388,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EchoNoteTests/Pods-EchoNoteTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EE3C179725BFC8AB00393597 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		FE0130FDCD659566230FC5BA /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,7 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3D537925B298800064C274 /* ViewController.swift in Sources */,
+				EE3D537925B298800064C274 /* MainViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 			);
@@ -451,14 +469,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE3D537A25B298800064C274 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE3D537B25B298800064C274 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EE3D537F25B298830064C274 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
