@@ -14,6 +14,10 @@ class HomeViewController: UIViewController {
             $0.estimatedItemSize = CGSize(width: 100, height: 45)
             $0.scrollDirection = .horizontal
         }
+    let percentLabel = UILabel()
+        .then {
+            $0.numberOfLines = 0
+        }
     
     var tabItems: [TabItem] = []
     var selectedTabButtonIndex = 0
@@ -28,5 +32,6 @@ class HomeViewController: UIViewController {
         self.view.backgroundColor = .white
         
         setupTabButtonCollectionView()
+        setupPercentLabel()
     }
 }
