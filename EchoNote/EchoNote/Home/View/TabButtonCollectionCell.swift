@@ -49,8 +49,8 @@ class TabButtonCollectionCell: UICollectionViewCell {
             titleLabel.textColor = item.color
             self.layer.borderColor = item.color.cgColor
         } else {
-            titleLabel.textColor = .lightGray
-            self.layer.borderColor = UIColor.lightGray.cgColor
+            titleLabel.textColor = UIColor(displayP3Red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
+            self.layer.borderColor = UIColor(displayP3Red: 215/255, green: 215/255, blue: 215/255, alpha: 1).cgColor
         }
     }
 }
