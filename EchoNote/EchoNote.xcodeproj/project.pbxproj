@@ -12,7 +12,7 @@
 		EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE3C179B25BFC93900393597 /* .swiftlint.yml */; };
 		EE3D537525B298800064C274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537425B298800064C274 /* AppDelegate.swift */; };
 		EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537625B298800064C274 /* SceneDelegate.swift */; };
-		EE3D537925B298800064C274 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537825B298800064C274 /* MainViewController.swift */; };
+		EE3D537925B298800064C274 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537825B298800064C274 /* HomeViewController.swift */; };
 		EE3D537E25B298830064C274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3D537D25B298830064C274 /* Assets.xcassets */; };
 		EE3D538125B298830064C274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3D537F25B298830064C274 /* LaunchScreen.storyboard */; };
 		EE3D538C25B298830064C274 /* EchoNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D538B25B298830064C274 /* EchoNoteTests.swift */; };
@@ -49,7 +49,7 @@
 		EE3D537125B298800064C274 /* EchoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3D537425B298800064C274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE3D537625B298800064C274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE3D537825B298800064C274 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE3D537825B298800064C274 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE3D537D25B298830064C274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE3D538025B298830064C274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE3D538225B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +99,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE15321925C2E033008E471E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE3D537825B298800064C274 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		EE15321A25C2E05D008E471E /* ViewExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				EE15321A25C2E05D008E471E /* ViewExtension */,
+				EE15321925C2E033008E471E /* Home */,
 				EE3D537425B298800064C274 /* AppDelegate.swift */,
 				EE3D537625B298800064C274 /* SceneDelegate.swift */,
-				EE3D537825B298800064C274 /* MainViewController.swift */,
 				EE3D537D25B298830064C274 /* Assets.xcassets */,
 				EE3D537F25B298830064C274 /* LaunchScreen.storyboard */,
 				EE3D538225B298830064C274 /* Info.plist */,
@@ -442,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3D537925B298800064C274 /* MainViewController.swift in Sources */,
+				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 				EE15321C25C2E08B008E471E /* UIButton+.swift in Sources */,
