@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		63DFA20ABA7CEC37E1A50122 /* Pods_EchoNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C207C72D9B71641DD8411FC /* Pods_EchoNoteTests.framework */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
+		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
+		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
 		EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE3C179B25BFC93900393597 /* .swiftlint.yml */; };
 		EE3D537525B298800064C274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537425B298800064C274 /* AppDelegate.swift */; };
 		EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D537625B298800064C274 /* SceneDelegate.swift */; };
@@ -45,6 +47,8 @@
 		D96B7501FB693DBD0705225A /* Pods-EchoNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchoNote/Pods-EchoNote.release.xcconfig"; sourceTree = "<group>"; };
 		DC5E6CE52E011A7A11BBD585 /* Pods_EchoNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EchoNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
+		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
+		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
 		EE3C179B25BFC93900393597 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE3D537125B298800064C274 /* EchoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3D537425B298800064C274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				EE15325225C2F306008E471E /* View */,
 				EE3D537825B298800064C274 /* HomeViewController.swift */,
+				EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */,
+				EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -453,7 +459,9 @@
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
+				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
+				EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

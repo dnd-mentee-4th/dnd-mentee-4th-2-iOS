@@ -8,9 +8,25 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    var tabButtonCollectionView: UICollectionView!
+    let flowLayout = UICollectionViewFlowLayout()
+        .then {
+            $0.estimatedItemSize = CGSize(width: 100, height: 45)
+            $0.scrollDirection = .horizontal
+        }
+    
+    var tabItems: [TabItem] = []
+    var selectedTabButtonIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupView()
+    }
+    
+    func setupView() {
+        self.view.backgroundColor = .white
+        
+        setupTabButtonCollectionView()
     }
 }
