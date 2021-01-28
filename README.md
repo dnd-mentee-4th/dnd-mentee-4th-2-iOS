@@ -11,7 +11,7 @@ Are you usually interested in the environment? Are you willing to do little thin
 * Design: 김민송, 정아영
 
 ## Technology Stack
-<img src=".image/TechStack.png" width="500" />
+<img src="./image/TechStack.png" width="500" />
 
 ## ScreenShot
 
