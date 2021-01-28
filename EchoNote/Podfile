@@ -6,6 +6,7 @@ target 'EchoNote' do
     pod 'RxSwift', '6.0.0'
     pod 'RxCocoa', '6.0.0'
     pod 'SwiftLint'
+    pod 'Then'
 end
 
 # RxTest and RxBlocking make the most sense in the context of unit/integration tests
