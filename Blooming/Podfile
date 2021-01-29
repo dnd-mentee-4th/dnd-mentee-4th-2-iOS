@@ -1,7 +1,8 @@
 # Podfile
+platform :ios, '13.0'
 use_frameworks!
 
-target 'EchoNote' do
+target 'Blooming' do
     pod 'Alamofire', '~> 5.2'
     pod 'RxSwift', '6.0.0'
     pod 'RxCocoa', '6.0.0'
@@ -10,7 +11,7 @@ target 'EchoNote' do
 end
 
 # RxTest and RxBlocking make the most sense in the context of unit/integration tests
-target 'EchoNoteTests' do
+target 'BloomingTests' do
     pod 'RxBlocking', '6.0.0'
     pod 'RxTest', '6.0.0'
 end
