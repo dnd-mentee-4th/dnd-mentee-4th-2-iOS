@@ -1,2 +1,8 @@
 .DS_Store
 /.DS_Store
+
+Blooming/Blooming.xcworkspace/contents.xcworkspacedata
+
+Blooming/Blooming.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+Blooming/Podfile.lock

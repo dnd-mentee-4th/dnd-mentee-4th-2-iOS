@@ -1,4 +1,4 @@
-# dnd-mentee-4th-2-iOS
+# blooming
 iOS project for DND 4th project. This project is for the environment. You can receive the reward by completing environmental missions.
 
 <br />

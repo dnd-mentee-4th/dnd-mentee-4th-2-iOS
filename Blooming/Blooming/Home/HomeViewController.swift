@@ -19,7 +19,14 @@ class HomeViewController: UIViewController {
             $0.numberOfLines = 0
         }
     let remainingLabel = UILabel()
+    let circleProgressBar = CircleProgressBar(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
+        .then {
+            $0.setProgressWithAnimation(duration: 1.0, value: (20 * 60 + 20) / (24 * 60))
+            $0.labelText = "Q"
+            $0.labelSize = 22
+        }
     
+    // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
         TabItem(isSelected: true, title: "♻️분리수거", color: UIColor(displayP3Red: 2/255, green: 188/255, blue: 121/255, alpha: 1)),
         TabItem(title: "💧물절약", color: UIColor(displayP3Red: 56/255, green: 199/255, blue: 244/255, alpha: 1)),
@@ -27,6 +34,11 @@ class HomeViewController: UIViewController {
         TabItem(title: "🥡다회용기", color: UIColor(displayP3Red: 249/255, green: 64/255, blue: 97/255, alpha: 1)),
         TabItem(title: "🧾전자 영수증", color: UIColor(displayP3Red: 67/255, green: 65/255, blue: 165/255, alpha: 1))]
     var selectedTabButtonIndex = 0
+    var currentTime: Float = 20*60+20 {
+        didSet {
+            circleProgressBar.setProgressWithAnimation(duration: 1.0, value: currentTime / (24 * 60))
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +53,7 @@ class HomeViewController: UIViewController {
         setupTabButtonCollectionView()
         setupPercentLabel()
         setupRemainingLabel()
+        setupCircleProgressBar()
     }
     
     func bindViewModel() {
