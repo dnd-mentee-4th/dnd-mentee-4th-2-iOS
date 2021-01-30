@@ -102,12 +102,14 @@ extension HomeViewController {
         remainingLabel.attributedText = attributedString
     }
     
-    // MARK: Circle Progress Bar
-    func setupCircleProgressBar() {
-        self.view.addSubview(circleProgressBar)
+    // MARK: Quiz Button
+    func setupQuizButton() {
+        self.view.addSubview(quizButton)
         
-        circleProgressBar.translatesAutoresizingMaskIntoConstraints = false
-        circleProgressBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20 - 55).isActive = true
-        circleProgressBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -51 - 55).isActive = true
+        quizButton.translatesAutoresizingMaskIntoConstraints = false
+        quizButton.widthAnchor.constraint(equalToConstant: 55).isActive = true
+        quizButton.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        quizButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        quizButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -51).isActive = true
     }
 }

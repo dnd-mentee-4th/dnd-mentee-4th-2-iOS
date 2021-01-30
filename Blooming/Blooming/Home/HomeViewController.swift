@@ -19,12 +19,7 @@ class HomeViewController: UIViewController {
             $0.numberOfLines = 0
         }
     let remainingLabel = UILabel()
-    let circleProgressBar = CircleProgressBar(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
-        .then {
-            $0.setProgressWithAnimation(duration: 1.0, value: (20 * 60 + 20) / (24 * 60))
-            $0.labelText = "Q"
-            $0.labelSize = 22
-        }
+    let quizButton = QuizButton()
     
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
@@ -36,7 +31,7 @@ class HomeViewController: UIViewController {
     var selectedTabButtonIndex = 0
     var currentTime: Float = 20*60+20 {
         didSet {
-            circleProgressBar.setProgressWithAnimation(duration: 1.0, value: currentTime / (24 * 60))
+            quizButton.currentTime = currentTime
         }
     }
 
@@ -53,7 +48,7 @@ class HomeViewController: UIViewController {
         setupTabButtonCollectionView()
         setupPercentLabel()
         setupRemainingLabel()
-        setupCircleProgressBar()
+        setupQuizButton()
     }
     
     func bindViewModel() {

@@ -22,6 +22,7 @@
 		EE3D538C25B298830064C274 /* BloomingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D538B25B298830064C274 /* BloomingTests.swift */; };
 		EE3D539725B298830064C274 /* BloomingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D539625B298830064C274 /* BloomingUITests.swift */; };
 		EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */; };
+		EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFAB325C5151C0025EE54 /* QuizButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		EE3D539625B298830064C274 /* BloomingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomingUITests.swift; sourceTree = "<group>"; };
 		EE3D539825B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
+		EE8DFAB325C5151C0025EE54 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */,
+				EE8DFAB325C5151C0025EE54 /* QuizButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */,
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */,
