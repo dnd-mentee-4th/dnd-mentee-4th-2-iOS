@@ -11,33 +11,26 @@ class CircleProgressBar: UIView {
 
     private var progressLayer = CAShapeLayer()
     private var trackLayer = CAShapeLayer()
-    private let label = UILabel()
+    private var imageView = UIImageView()
+        .then {
+            $0.image = UIImage(named: "ic_quiz")
+            $0.contentMode = .scaleToFill
+            $0.layer.shadowColor = UIColor(named: "textPink")?.cgColor
+            $0.layer.shadowOffset = CGSize(width: 2, height: 2)
+            $0.layer.shadowOpacity = 0.3
+            $0.layer.shadowRadius = 4
+        }
     private var frameWidth: CGFloat!
     private var frameHeight: CGFloat!
     
-    var progressColor = UIColor.black {
+    var progressColor = UIColor(named: "peachyPinkTwo")! {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
         }
     }
-    var trackColor = UIColor.systemGray {
+    var trackColor = UIColor(displayP3Red: 239/255, green: 239/255, blue: 239/255, alpha: 1) {
         didSet {
             trackLayer.strokeColor = trackColor.cgColor
-        }
-    }
-    var labelSize: CGFloat = 14 {
-        didSet {
-            label.font = UIFont.boldSystemFont(ofSize: labelSize)
-        }
-    }
-    var labelText: String = "Q" {
-        didSet {
-            label.text = labelText
-        }
-    }
-    var labelColor = UIColor.black {
-        didSet {
-            label.textColor = labelColor
         }
     }
 
@@ -68,7 +61,7 @@ class CircleProgressBar: UIView {
         
         makeTrackLayer(circlePath)
         makeProgressLayer(circlePath)
-        setupLabel()
+        setupImageView()
     }
     
     func setProgressWithAnimation(duration: TimeInterval, value: Float) {
@@ -87,11 +80,10 @@ class CircleProgressBar: UIView {
 extension CircleProgressBar {
     func makeTrackLayer(_ circlePath: UIBezierPath) {
         trackLayer.path = circlePath.cgPath
-        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.fillColor = UIColor.white.cgColor
         trackLayer.strokeColor = trackColor.cgColor
         trackLayer.lineWidth = 3.0
         trackLayer.strokeEnd = 1.0
-        trackColor = .lightGray
         layer.addSublayer(trackLayer)
     }
     
@@ -101,17 +93,16 @@ extension CircleProgressBar {
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.lineWidth = 3.0
         progressLayer.strokeEnd = 0.0
-        progressColor = .black
         layer.addSublayer(progressLayer)
     }
     
-    func setupLabel() {
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = UIColor(displayP3Red: 2/255, green: 188/255, blue: 121/255, alpha: 1)
-        self.addSubview(label)
+    func setupImageView() {
+        self.addSubview(imageView)
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: frameWidth/2).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: frameHeight/2).isActive = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: 22).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
+        imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: frameWidth/2).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: frameHeight/2).isActive = true
     }
 }

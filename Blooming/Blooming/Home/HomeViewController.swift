@@ -20,6 +20,12 @@ class HomeViewController: UIViewController {
         }
     let remainingLabel = UILabel()
     let quizButton = QuizButton()
+        .then {
+            $0.layer.shadowOpacity = 0.1
+            $0.layer.shadowOffset = CGSize(width: 0, height: 5)
+            $0.layer.shadowRadius = 10
+            $0.layer.shadowColor = UIColor.black.cgColor
+        }
     
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [

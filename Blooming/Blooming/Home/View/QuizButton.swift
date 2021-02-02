@@ -8,11 +8,9 @@
 import UIKit
 
 class QuizButton: UIButton {
-    let circleProgressBar = CircleProgressBar(frame: CGRect(x: 0, y: 0, width: 55, height: 55))
+    let circleProgressBar = CircleProgressBar(frame: CGRect(x: 0, y: 0, width: 56, height: 56))
         .then {
             $0.setProgressWithAnimation(duration: 1.0, value: (20 * 60 + 20) / (24 * 60))
-            $0.labelText = "Q"
-            $0.labelSize = 22
         }
     var currentTime: Float = 20 * 60 + 20 {
         didSet {
@@ -36,7 +34,7 @@ class QuizButton: UIButton {
         self.addSubview(circleProgressBar)
         
         circleProgressBar.translatesAutoresizingMaskIntoConstraints = false
-        circleProgressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -27.5).isActive = true
-        circleProgressBar.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -27.5).isActive = true
+        circleProgressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -28).isActive = true
+        circleProgressBar.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -28).isActive = true
     }
 }
