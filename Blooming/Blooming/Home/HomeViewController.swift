@@ -35,11 +35,6 @@ class HomeViewController: UIViewController {
         TabItem(title: "🥡다회용기", color: UIColor(displayP3Red: 249/255, green: 64/255, blue: 97/255, alpha: 1)),
         TabItem(title: "🧾전자 영수증", color: UIColor(displayP3Red: 67/255, green: 65/255, blue: 165/255, alpha: 1))]
     var selectedTabButtonIndex = 0
-    var currentTime: Float = 20*60+20 {
-        didSet {
-            quizButton.currentTime = currentTime
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,5 +54,12 @@ class HomeViewController: UIViewController {
     
     func bindViewModel() {
         // todo - selectedTabButtonIndex가 바뀔때마다 percentLabel, remainingLabel에 적용되는 데이터가 달라집니다.
+    }
+    
+    func getCurrentTime() -> Float {
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
+        return Float((components.hour ?? 0) * 60 + (components.minute ?? 0))
     }
 }

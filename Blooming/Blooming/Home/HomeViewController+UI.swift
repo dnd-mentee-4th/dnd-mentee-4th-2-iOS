@@ -104,6 +104,7 @@ extension HomeViewController {
     
     // MARK: Quiz Button
     func setupQuizButton() {
+        quizButton.currentTime = getCurrentTime()
         self.view.addSubview(quizButton)
         
         quizButton.translatesAutoresizingMaskIntoConstraints = false
