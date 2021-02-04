@@ -19,10 +19,21 @@ extension HomeViewController {
     
     // MARK: Tab Button Collection View
     func setupTabButtonCollectionView() {
+        setupTabButtonCollectionViewSetting()
+        self.view.addSubview(tabButtonCollectionView)
+        
+        tabButtonCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        tabButtonCollectionView.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        tabButtonCollectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 64).isActive = true
+        tabButtonCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        tabButtonCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    }
+    
+    func setupTabButtonCollectionViewSetting() {
         tabButtonCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
             .then {
                 $0.register(TabButtonCollectionCell.self, forCellWithReuseIdentifier: TabButtonCollectionCell.identifier)
-                $0.backgroundColor = UIColor.white
+                $0.backgroundColor = .clear
                 $0.contentInset.left = 32
                 $0.contentInset.right = 20
                 $0.showsHorizontalScrollIndicator = false
@@ -30,13 +41,6 @@ extension HomeViewController {
             }
         tabButtonCollectionView.delegate = self
         tabButtonCollectionView.dataSource = self
-        self.view.addSubview(tabButtonCollectionView)
-        
-        tabButtonCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        tabButtonCollectionView.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        tabButtonCollectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 116).isActive = true
-        tabButtonCollectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        tabButtonCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
     // MARK: Quiz Button

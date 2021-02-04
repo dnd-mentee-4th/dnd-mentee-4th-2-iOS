@@ -28,6 +28,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         tabItems[indexPath.item].isSelected = true
         
         self.selectedTabButtonIndex = indexPath.item
+        // todo - 선택된 아이템에 따른 처리
         self.tabButtonCollectionView.scrollToItem(at: IndexPath(row: indexPath.item, section: 0), at: .centeredHorizontally, animated: true)
         self.tabButtonCollectionView.reloadData()
         

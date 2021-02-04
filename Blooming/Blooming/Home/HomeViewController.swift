@@ -29,11 +29,12 @@ class HomeViewController: UIViewController {
     
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
-        TabItem(isSelected: true, title: "♻️분리수거", color: UIColor(displayP3Red: 2/255, green: 188/255, blue: 121/255, alpha: 1)),
-        TabItem(title: "💧물절약", color: UIColor(displayP3Red: 56/255, green: 199/255, blue: 244/255, alpha: 1)),
-        TabItem(title: "🌱친환경 제품", color: UIColor(displayP3Red: 142/255, green: 217/255, blue: 20/255, alpha: 1)),
-        TabItem(title: "🥡다회용기", color: UIColor(displayP3Red: 249/255, green: 64/255, blue: 97/255, alpha: 1)),
-        TabItem(title: "🧾전자 영수증", color: UIColor(displayP3Red: 67/255, green: 65/255, blue: 165/255, alpha: 1))]
+        TabItem(isSelected: true, title: "분리수거", textColor: "mediumGreen", image: "ic_btn_my", strokeColor: "lightGreen"),
+        TabItem(isSelected: false, title: "물절약", textColor: "greyBlue", image: "ic_btn_my", strokeColor: "skyBlue"),
+        TabItem(isSelected: false, title: "친환경 제품", textColor: "macaroniAndCheese", image: "ic_btn_my"),
+        TabItem(isSelected: false, title: "다회용기", textColor: "palePurple", image: "ic_btn_my"),
+        TabItem(isSelected: false, title: "전자 영수증", textColor: "salmon", image: "ic_btn_my", strokeColor: "lightPeach")
+    ]
     var selectedTabButtonIndex = 0
 
     override func viewDidLoad() {
@@ -44,7 +45,7 @@ class HomeViewController: UIViewController {
     }
     
     func setupView() {
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(named: "white02")!
         
         setupMypageButton()
         setupTabButtonCollectionView()
