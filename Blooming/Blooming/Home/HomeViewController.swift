@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
             $0.layer.shadowRadius = 10
             $0.layer.shadowColor = UIColor.black.cgColor
         }
+    let containerView = UIView()
     
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
@@ -49,6 +50,7 @@ class HomeViewController: UIViewController {
         
         setupMypageButton()
         setupTabButtonCollectionView()
+        setupContainerView()
         setupQuizButton()
     }
     

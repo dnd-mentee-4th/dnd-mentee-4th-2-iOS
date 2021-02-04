@@ -43,6 +43,17 @@ extension HomeViewController {
         tabButtonCollectionView.dataSource = self
     }
     
+    // MARK: Container View
+    func setupContainerView() {
+        self.view.addSubview(containerView)
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.topAnchor.constraint(equalTo: tabButtonCollectionView.bottomAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    }
+    
     // MARK: Quiz Button
     func setupQuizButton() {
         quizButton.currentTime = getCurrentTime()
