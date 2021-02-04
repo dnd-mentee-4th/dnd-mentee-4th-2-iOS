@@ -8,17 +8,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    let mypageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        .then {
+            $0.setBackgroundImage(UIImage(named: "ic_btn_my"), for: .normal)
+            $0.contentMode = .scaleAspectFit
+        }
     var tabButtonCollectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
         .then {
             $0.estimatedItemSize = CGSize(width: 100, height: 45)
             $0.scrollDirection = .horizontal
         }
-    let percentLabel = UILabel()
-        .then {
-            $0.numberOfLines = 0
-        }
-    let remainingLabel = UILabel()
     let quizButton = QuizButton()
         .then {
             $0.layer.shadowOpacity = 0.1
@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
     func setupView() {
         self.view.backgroundColor = .white
         
+        setupMypageButton()
         setupTabButtonCollectionView()
         setupQuizButton()
     }

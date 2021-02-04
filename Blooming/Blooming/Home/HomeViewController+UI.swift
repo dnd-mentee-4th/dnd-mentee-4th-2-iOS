@@ -8,6 +8,15 @@
 import UIKit
 
 extension HomeViewController {
+    // MARK: Mypage Button
+    func setupMypageButton() {
+        self.view.addSubview(mypageButton)
+        
+        mypageButton.translatesAutoresizingMaskIntoConstraints = false
+        mypageButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        mypageButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+    }
+    
     // MARK: Tab Button Collection View
     func setupTabButtonCollectionView() {
         tabButtonCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
