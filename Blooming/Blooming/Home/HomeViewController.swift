@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
     ]
     var selectedTabButtonIndex = 0
 
+    // MARK: method
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -58,10 +59,4 @@ class HomeViewController: UIViewController {
         // todo - selectedTabButtonIndex가 바뀔때마다 percentLabel, remainingLabel에 적용되는 데이터가 달라집니다.
     }
     
-    func getCurrentTime() -> Float {
-        let date = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
-        return Float((components.hour ?? 0) * 60 + (components.minute ?? 0))
-    }
 }

@@ -65,4 +65,11 @@ extension HomeViewController {
         quizButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         quizButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
     }
+    
+    func getCurrentTime() -> Float {
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
+        return Float((components.hour ?? 0) * 60 + (components.minute ?? 0))
+    }
 }
