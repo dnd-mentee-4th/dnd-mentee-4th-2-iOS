@@ -23,6 +23,12 @@
 		EE3D539725B298830064C274 /* BloomingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D539625B298830064C274 /* BloomingUITests.swift */; };
 		EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */; };
 		EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFAB325C5151C0025EE54 /* QuizButton.swift */; };
+		EEEF8A4525CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4225CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Bold.otf */; };
+		EEEF8A4625CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4325CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Medium.otf */; };
+		EEEF8A4725CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4425CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Regular.otf */; };
+		EEEF8A4E25CED46200CFC0E5 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4B25CED46200CFC0E5 /* SF-Pro-Display-Bold.otf */; };
+		EEEF8A4F25CED46200CFC0E5 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4C25CED46200CFC0E5 /* SF-Pro-Display-Medium.otf */; };
+		EEEF8A5025CED46200CFC0E5 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A4D25CED46200CFC0E5 /* SF-Pro-Display-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,12 @@
 		EE3D539825B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		EE8DFAB325C5151C0025EE54 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
+		EEEF8A4225CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa-Han-Sans-Neo-Bold.otf"; sourceTree = "<group>"; };
+		EEEF8A4325CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa-Han-Sans-Neo-Medium.otf"; sourceTree = "<group>"; };
+		EEEF8A4425CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa-Han-Sans-Neo-Regular.otf"; sourceTree = "<group>"; };
+		EEEF8A4B25CED46200CFC0E5 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		EEEF8A4C25CED46200CFC0E5 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EEEF8A4D25CED46200CFC0E5 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +169,7 @@
 		EE3D537325B298800064C274 /* Blooming */ = {
 			isa = PBXGroup;
 			children = (
+				EEEF8A3E25CED2F400CFC0E5 /* Font */,
 				EE8DFA8925C50F4E0025EE54 /* View */,
 				EE15321925C2E033008E471E /* Home */,
 				EE3D537425B298800064C274 /* AppDelegate.swift */,
@@ -192,6 +205,19 @@
 				EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EEEF8A3E25CED2F400CFC0E5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF8A4B25CED46200CFC0E5 /* SF-Pro-Display-Bold.otf */,
+				EEEF8A4C25CED46200CFC0E5 /* SF-Pro-Display-Medium.otf */,
+				EEEF8A4D25CED46200CFC0E5 /* SF-Pro-Display-Regular.otf */,
+				EEEF8A4225CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Bold.otf */,
+				EEEF8A4325CED32400CFC0E5 /* Spoqa-Han-Sans-Neo-Medium.otf */,
+				EEEF8A4425CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Regular.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		FC451D61F1D63055FCB7C764 /* Frameworks */ = {
@@ -315,9 +341,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEF8A4F25CED46200CFC0E5 /* SF-Pro-Display-Medium.otf in Resources */,
 				EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */,
+				EEEF8A4525CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Bold.otf in Resources */,
 				EE3D538125B298830064C274 /* LaunchScreen.storyboard in Resources */,
+				EEEF8A4625CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Medium.otf in Resources */,
+				EEEF8A4E25CED46200CFC0E5 /* SF-Pro-Display-Bold.otf in Resources */,
 				EE3D537E25B298830064C274 /* Assets.xcassets in Resources */,
+				EEEF8A5025CED46200CFC0E5 /* SF-Pro-Display-Regular.otf in Resources */,
+				EEEF8A4725CED32500CFC0E5 /* Spoqa-Han-Sans-Neo-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
