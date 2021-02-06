@@ -9,14 +9,22 @@ import UIKit
 
 class LoginHome: UIView {
     // todo - 이미지 소스 수정 필요
-    let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
-    let basicLabel = UILabel()
+    private let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
+    private let basicLabel = UILabel()
         .then {
             $0.text = "꽃을 생성하고 싶다면 환경보호\n활동을 실천해보세요"
             $0.textColor = UIColor(named: "grey02")!
             $0.font = UIFont.systemFont(ofSize: 14)
             $0.numberOfLines = 0
             $0.textAlignment = .center
+        }
+    let loginButton = UIButton()
+        .then {
+            $0.backgroundColor = UIColor(named: "peachyPinkTwo")!
+            $0.layer.cornerRadius = 24
+            $0.setTitle("로그인하기", for: .normal)
+            $0.setTitleColor(.white, for: .normal)
+            $0.titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         }
 
     override init(frame: CGRect) {
@@ -34,6 +42,7 @@ class LoginHome: UIView {
     func setupView() {
         setupImageView()
         setupBasicLabel()
+        setupLoginButton()
     }
 
 }
@@ -58,5 +67,16 @@ extension LoginHome {
         basicLabel.translatesAutoresizingMaskIntoConstraints = false
         basicLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 32).isActive = true
         basicLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    // MARK: Login Button
+    private func setupLoginButton() {
+        self.addSubview(loginButton)
+        
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.widthAnchor.constraint(equalToConstant: 97).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        loginButton.topAnchor.constraint(equalTo: basicLabel.bottomAnchor, constant: 15).isActive = true
+        loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
 }
