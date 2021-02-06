@@ -9,7 +9,15 @@ import UIKit
 
 class LoginHome: UIView {
     // todo - 이미지 소스 수정 필요
-    let imageView = UIImageView(image: UIImage(named: "ic_quiz"))
+    let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
+    let basicLabel = UILabel()
+        .then {
+            $0.text = "꽃을 생성하고 싶다면 환경보호\n활동을 실천해보세요"
+            $0.textColor = UIColor(named: "grey02")!
+            $0.font = UIFont.systemFont(ofSize: 14)
+            $0.numberOfLines = 0
+            $0.textAlignment = .center
+        }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +32,8 @@ class LoginHome: UIView {
     }
     
     func setupView() {
-        
+        setupImageView()
+        setupBasicLabel()
     }
 
 }
@@ -42,4 +51,12 @@ extension LoginHome {
         imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 65).isActive = true
     }
     
+    // MARK: BasicLabel
+    private func setupBasicLabel() {
+        self.addSubview(basicLabel)
+        
+        basicLabel.translatesAutoresizingMaskIntoConstraints = false
+        basicLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 32).isActive = true
+        basicLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
 }
