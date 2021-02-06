@@ -4,12 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SF-Pro-Display-Bold.otf</string>
-		<string>SF-Pro-Display-Medium.otf</string>
-		<string>SF-Pro-Display-Regular.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Bold.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Medium.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Regular.otf</string>
+		<string>SpoqaHanSansNeo-Bold.ttf</string>
+		<string>SpoqaHanSansNeo-Medium.ttf</string>
+		<string>SpoqaHanSansNeo-Regular.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
