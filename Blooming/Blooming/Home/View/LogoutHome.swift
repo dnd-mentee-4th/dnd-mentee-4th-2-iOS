@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol LogoutHomeProtocol: class {
     func clickLoginButton()
 }

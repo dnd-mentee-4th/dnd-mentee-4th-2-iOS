@@ -54,6 +54,18 @@ extension HomeViewController {
         containerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
+    // MARK: Logout Home
+    func setupLogoutHome() {
+        logoutHome.delegate = self
+        containerView.addSubview(logoutHome)
+        
+        logoutHome.translatesAutoresizingMaskIntoConstraints = false
+        logoutHome.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        logoutHome.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+        logoutHome.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        logoutHome.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+    }
+    
     // MARK: Quiz Button
     func setupQuizButton() {
         quizButton.currentTime = getCurrentTime()
