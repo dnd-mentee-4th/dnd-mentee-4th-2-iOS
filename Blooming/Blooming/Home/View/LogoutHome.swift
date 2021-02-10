@@ -12,9 +12,11 @@ class LogoutHome: UIView {
     private let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
     private let basicLabel = UILabel()
         .then {
-            $0.text = "꽃을 생성하고 싶다면 환경보호\n활동을 실천해보세요"
-            $0.textColor = UIColor(named: "grey02")!
-            $0.font = UIFont.systemFont(ofSize: 14)
+            $0.attributedText = NSAttributedString(string: "꽃을 생성하고 싶다면 환경보호\n활동을 실천해보세요", attributes: [
+                .font: UIFont.spoqaMedium(14),
+                .foregroundColor: UIColor(named: "grey02")!,
+                .kern: -0.14
+              ])
             $0.numberOfLines = 0
             $0.textAlignment = .center
         }
