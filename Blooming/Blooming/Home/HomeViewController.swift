@@ -28,6 +28,12 @@ class HomeViewController: UIViewController {
         }
     let containerView = UIView()
     
+    var isQuizHidden: Bool = false {
+        didSet {
+            quizButton.isHidden = isQuizHidden
+        }
+    }
+    
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
         TabItem(isSelected: true, title: "분리수거", textColor: "mediumGreen", image: "ic_btn_my", strokeColor: "lightGreen"),
