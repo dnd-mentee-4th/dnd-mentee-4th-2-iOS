@@ -22,11 +22,7 @@ class LogoutHome: UIView {
         }
     let loginButton = UIButton()
         .then {
-            $0.backgroundColor = UIColor(named: "peachyPinkTwo")!
-            $0.layer.cornerRadius = 24
-            $0.setTitle("로그인하기", for: .normal)
-            $0.setTitleColor(.white, for: .normal)
-            $0.titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+            $0.setImage(UIImage(named: "ic_btn_login")!, for: .normal)
         }
 
     override init(frame: CGRect) {
