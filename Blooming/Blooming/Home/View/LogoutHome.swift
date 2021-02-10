@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+protocol LogoutHomeProtocol: class {
+    func clickLoginButton()
+}
+
 class LogoutHome: UIView {
     // todo - 이미지 소스 수정 필요
     private let imageView = UIImageView(image: UIImage(named: "ic_empty_flower")!)
@@ -21,6 +26,8 @@ class LogoutHome: UIView {
             $0.textAlignment = .center
         }
     let loginButton = UIButton()
+    
+    weak var delegate: LogoutHomeProtocol?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +45,10 @@ class LogoutHome: UIView {
         setupImageView()
         setupBasicLabel()
         setupLoginButton()
+    }
+    
+    @objc func clickLoginButton(_ sender: UIButton) {
+        delegate?.clickLoginButton()
     }
 
 }
@@ -68,6 +79,7 @@ extension LogoutHome {
     // MARK: Login Button
     private func setupLoginButton() {
         loginButton.setImage(UIImage(named: "ic_btn_login")!, for: .normal)
+        loginButton.addTarget(self, action: #selector(clickLoginButton(_:)), for: .touchUpInside)
         self.addSubview(loginButton)
         
         loginButton.translatesAutoresizingMaskIntoConstraints = false
