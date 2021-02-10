@@ -9,7 +9,7 @@ import UIKit
 
 class LogoutHome: UIView {
     // todo - 이미지 소스 수정 필요
-    private let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
+    private let imageView = UIImageView(image: UIImage(named: "ic_empty_flower")!)
     private let basicLabel = UILabel()
         .then {
             $0.attributedText = NSAttributedString(string: "꽃을 생성하고 싶다면 환경보호\n활동을 실천해보세요", attributes: [
@@ -21,9 +21,6 @@ class LogoutHome: UIView {
             $0.textAlignment = .center
         }
     let loginButton = UIButton()
-        .then {
-            $0.setImage(UIImage(named: "ic_btn_login")!, for: .normal)
-        }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,13 +46,14 @@ class LogoutHome: UIView {
 extension LogoutHome {
     // MARK: ImageView
     private func setupImageView() {
+        imageView.contentMode = .scaleAspectFit
         self.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 165).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -242).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 73).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 65).isActive = true
+        imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 126).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -276).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 69).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -69).isActive = true
     }
     
     // MARK: BasicLabel
@@ -69,6 +67,7 @@ extension LogoutHome {
     
     // MARK: Login Button
     private func setupLoginButton() {
+        loginButton.setImage(UIImage(named: "ic_btn_login")!, for: .normal)
         self.addSubview(loginButton)
         
         loginButton.translatesAutoresizingMaskIntoConstraints = false
