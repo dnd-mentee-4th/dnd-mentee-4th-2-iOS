@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginHome: UIView {
+class LogoutHome: UIView {
     // todo - 이미지 소스 수정 필요
     private let imageView = UIImageView(image: UIImage(named: "ic_quiz")!)
     private let basicLabel = UILabel()
@@ -48,7 +48,7 @@ class LoginHome: UIView {
 }
 
 // MARK: +UI
-extension LoginHome {
+extension LogoutHome {
     // MARK: ImageView
     private func setupImageView() {
         self.addSubview(imageView)
