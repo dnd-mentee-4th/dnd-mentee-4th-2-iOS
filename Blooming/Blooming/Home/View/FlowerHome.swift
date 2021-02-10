@@ -39,4 +39,18 @@ extension FlowerHome {
         
         return attributedString
     }
+    
+    private func getFlowerPercentageText(color: UIColor, percent: Int) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: "재활용 꽃이\n\(percent)% 피었어요", attributes: [
+            .font: UIFont.spoqaMedium(28),
+            .foregroundColor: UIColor(named: "black")!,
+            .kern: -0.28
+        ])
+        attributedString.addAttributes([
+            .font: UIFont.systemFont(ofSize: 28.0, weight: .semibold),
+            .foregroundColor: color
+        ], range: NSRange(location: 7, length: String(percent).count + 1))
+        
+        return attributedString
+    }
 }
