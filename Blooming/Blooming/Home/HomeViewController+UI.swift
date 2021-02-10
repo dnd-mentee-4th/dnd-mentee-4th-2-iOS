@@ -101,4 +101,16 @@ extension HomeViewController {
         
         remainingLabel.attributedText = attributedString
     }
+    
+    // MARK: Quiz Button
+    func setupQuizButton() {
+        quizButton.currentTime = getCurrentTime()
+        self.view.addSubview(quizButton)
+        
+        quizButton.translatesAutoresizingMaskIntoConstraints = false
+        quizButton.widthAnchor.constraint(equalToConstant: 56).isActive = true
+        quizButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        quizButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        quizButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
+    }
 }

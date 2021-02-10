@@ -1,4 +1,4 @@
-# dnd-mentee-4th-2-iOS
+# blooming
 iOS project for DND 4th project. This project is for the environment. You can receive the reward by completing environmental missions.
 
 <br />
@@ -17,3 +17,4 @@ Are you usually interested in the environment? Are you willing to do little thin
 
 ## Reference
 * [CocoaPod 사용해보기](https://the-brain-of-sic2.tistory.com/66)
+* [Create circular Progress Bar in iOS](https://www.tutorialspoint.com/create-circular-progress-bar-in-ios)
