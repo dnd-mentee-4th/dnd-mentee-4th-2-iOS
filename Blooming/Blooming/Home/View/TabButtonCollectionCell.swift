@@ -52,13 +52,12 @@ class TabButtonCollectionCell: UICollectionViewCell {
     }
     
     func setButtonInformatin(item: TabItem) {
-        titleLabel.text = item.title
         imageView.image = UIImage(named: item.image)
         if item.isSelected {
-            titleLabel.textColor = UIColor(named: item.textColor)!
+            titleLabel.attributedText = getAttributedText(text: item.title, color: UIColor(named: item.textColor)!)
             self.layer.borderColor = UIColor(named: (item.strokeColor ?? item.textColor))!.cgColor
         } else {
-            titleLabel.textColor = UIColor(named: "grey01")!
+            titleLabel.attributedText = getAttributedText(text: item.title, color: UIColor(named: "grey01")!)
             self.layer.borderColor = UIColor.white.cgColor
         }
     }
@@ -74,6 +73,16 @@ extension TabButtonCollectionCell {
         titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 33).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -12).isActive = true
+    }
+    
+    private func getAttributedText(text: String, color: UIColor) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text, attributes: [
+            .font: UIFont.spoqaMedium(14),
+            .foregroundColor: color,
+            .kern: -0.14
+        ])
+        
+        return attributedString
     }
     
     private func setupImageView() {
