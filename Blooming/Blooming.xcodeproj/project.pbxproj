@@ -23,6 +23,10 @@
 		EE3D539725B298830064C274 /* BloomingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D539625B298830064C274 /* BloomingUITests.swift */; };
 		EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */; };
 		EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFAB325C5151C0025EE54 /* QuizButton.swift */; };
+		EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */; };
+		EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */; };
+		EEEF8A7B25CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */; };
+		EEEF8A7C25CEE97500CFC0E5 /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7925CEE97500CFC0E5 /* SpoqaHanSansNeo-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		EE3D539825B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		EE8DFAB325C5151C0025EE54 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
+		EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
+		EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
+		EEEF8A7925CEE97500CFC0E5 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,7 @@
 		EE3D537325B298800064C274 /* Blooming */ = {
 			isa = PBXGroup;
 			children = (
+				EEEF8A3E25CED2F400CFC0E5 /* Font */,
 				EE8DFA8925C50F4E0025EE54 /* View */,
 				EE15321925C2E033008E471E /* Home */,
 				EE3D537425B298800064C274 /* AppDelegate.swift */,
@@ -190,8 +199,19 @@
 			isa = PBXGroup;
 			children = (
 				EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */,
+				EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EEEF8A3E25CED2F400CFC0E5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */,
+				EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */,
+				EEEF8A7925CEE97500CFC0E5 /* SpoqaHanSansNeo-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		FC451D61F1D63055FCB7C764 /* Frameworks */ = {
@@ -316,7 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE3C179C25BFC93900393597 /* .swiftlint.yml in Resources */,
+				EEEF8A7C25CEE97500CFC0E5 /* SpoqaHanSansNeo-Regular.ttf in Resources */,
+				EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */,
 				EE3D538125B298830064C274 /* LaunchScreen.storyboard in Resources */,
+				EEEF8A7B25CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf in Resources */,
 				EE3D537E25B298830064C274 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */,
+				EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */,
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */,
