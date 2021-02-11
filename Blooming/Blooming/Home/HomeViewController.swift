@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
             $0.layer.shadowOffset = CGSize(width: 0, height: 5)
             $0.layer.shadowRadius = 10
             $0.layer.shadowColor = UIColor.black.cgColor
+            $0.isHidden = true // todo - 로그인 여부에 따라, 퀴즈 풀이 여부에 따라 달라져야 합니다.
         }
     let containerView = UIView()
     let logoutHome = LogoutHome()

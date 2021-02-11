@@ -12,7 +12,6 @@ protocol LogoutHomeProtocol: class {
 }
 
 class LogoutHome: UIView {
-    // todo - 이미지 소스 수정 필요
     private let imageView = UIImageView(image: UIImage(named: "ic_empty_flower")!)
     private let basicLabel = UILabel()
         .then {
