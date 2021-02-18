@@ -23,6 +23,7 @@
 		EE3D539725B298830064C274 /* BloomingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D539625B298830064C274 /* BloomingUITests.swift */; };
 		EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */; };
 		EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DFAB325C5151C0025EE54 /* QuizButton.swift */; };
+		EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE950A25DEE3FE008F0D1D /* CommonViewController.swift */; };
 		EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */; };
 		EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */; };
 		EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */; };
@@ -75,6 +76,7 @@
 		EE3D539825B298830064C274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 		EE8DFAB325C5151C0025EE54 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
+		EEAE950A25DEE3FE008F0D1D /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHome.swift; sourceTree = "<group>"; };
 		EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				EEEF8A3E25CED2F400CFC0E5 /* Font */,
 				EE8DFA8925C50F4E0025EE54 /* View */,
+				EEAE950825DEE3E2008F0D1D /* Login */,
 				EE15321925C2E033008E471E /* Home */,
 				EE3D537425B298800064C274 /* AppDelegate.swift */,
 				EE3D537625B298800064C274 /* SceneDelegate.swift */,
@@ -205,6 +208,22 @@
 				EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EEAE950825DEE3E2008F0D1D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEAE950925DEE3EB008F0D1D /* Common */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EEAE950925DEE3EB008F0D1D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EEAE950A25DEE3FE008F0D1D /* CommonViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EEEF8A3E25CED2F400CFC0E5 /* Font */ = {
@@ -511,6 +530,7 @@
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
+				EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */,
 				EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

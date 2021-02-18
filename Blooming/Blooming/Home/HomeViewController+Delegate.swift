@@ -38,6 +38,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: LogoutHomeProtocol {
     func clickLoginButton() {
-        // todo - 로그인 화면으로 이동합니다.
+        let nextVC = UINavigationController(rootViewController: CommonViewController())
+        nextVC.isNavigationBarHidden = true
+        nextVC.modalPresentationStyle = .fullScreen
+        self.show(nextVC, sender: self)
     }
 }
