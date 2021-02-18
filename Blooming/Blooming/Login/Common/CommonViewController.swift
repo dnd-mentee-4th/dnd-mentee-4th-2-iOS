@@ -23,7 +23,8 @@ class CommonViewController: UIViewController {
     }
     
     func setupView() {
-        
+        self.view.backgroundColor = UIColor(named: "white02")!
+        setupBaseLabel()
     }
 
 }
