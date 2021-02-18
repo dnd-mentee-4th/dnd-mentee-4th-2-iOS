@@ -35,3 +35,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return true
     }
 }
+
+extension HomeViewController: LogoutHomeProtocol {
+    func clickLoginButton() {
+        // todo - 로그인 화면으로 이동합니다.
+    }
+}
