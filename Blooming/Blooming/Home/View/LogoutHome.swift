@@ -83,7 +83,7 @@ extension LogoutHome {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.widthAnchor.constraint(equalToConstant: 97).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        loginButton.topAnchor.constraint(equalTo: basicLabel.bottomAnchor, constant: 15).isActive = true
+        loginButton.topAnchor.constraint(equalTo: basicLabel.bottomAnchor, constant: 35).isActive = true
         loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
 }
