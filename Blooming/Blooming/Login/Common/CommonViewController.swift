@@ -15,6 +15,15 @@ class CommonViewController: UIViewController {
             .kern: -0.26
           ])
     }
+    let signInButton = UIButton().then {
+        $0.setAttributedTitle(NSAttributedString(string: "로그인", attributes: [
+            .font: UIFont.spoqaBold(15),
+            .foregroundColor: UIColor.white,
+            .kern: -0.15
+        ]), for: .normal)
+        $0.backgroundColor = UIColor(named: "peachyPinkTwo")!
+        $0.layer.cornerRadius = 24
+    }
     let signUpButton = UIButton().then {
         $0.setAttributedTitle(NSAttributedString(string: "피어나 회원가입", attributes: [
             .font: UIFont.spoqaBold(15),
@@ -48,6 +57,11 @@ class CommonViewController: UIViewController {
         setupBeforeSignInButton()
         setupUnderLine()
         setupSignUpButton()
+        setupSignInButton()
+    }
+    
+    @objc func clickSignInButton(_ sender: UIButton) {
+        // todo
     }
     
     @objc func clickSignUpButton(_ sender: UIButton) {
@@ -71,13 +85,25 @@ extension CommonViewController {
         baseLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
     }
     
+    // MARK: SignIn Button
+    private func setupSignInButton() {
+        signInButton.addTarget(self, action: #selector(clickSignInButton(_:)), for: .touchUpInside)
+        self.view.addSubview(signInButton)
+        
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 42).isActive = true
+        signInButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        signInButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        signInButton.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -17).isActive = true
+    }
+    
     // MARK: SignUp Button
     func setupSignUpButton() {
         signUpButton.addTarget(self, action: #selector(clickSignUpButton(_:)), for: .touchUpInside)
         self.view.addSubview(signUpButton)
         
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
-        signUpButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40).isActive = true
+        signUpButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 42).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
         signUpButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         signUpButton.bottomAnchor.constraint(equalTo: beforeSignInButton.topAnchor, constant: -13).isActive = true
