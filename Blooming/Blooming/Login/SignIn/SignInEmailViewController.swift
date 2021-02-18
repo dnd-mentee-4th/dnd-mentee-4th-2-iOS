@@ -44,7 +44,14 @@ class SignInEmailViewController: UIViewController {
         $0.backgroundColor = UIColor(named: "peachyPinkTwo")!
         $0.layer.cornerRadius = 24
     }
+    
     var nextButtonBottom: NSLayoutConstraint?
+    var isEnableButton: Bool = false {
+        didSet {
+            nextButton.isEnabled = oldValue
+            nextButton.backgroundColor = oldValue ? UIColor(named: "peachyPinkTwo")! : UIColor(named: "grey04")!
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
