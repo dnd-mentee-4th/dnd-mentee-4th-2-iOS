@@ -15,6 +15,16 @@ class CommonViewController: UIViewController {
             .kern: -0.26
           ])
     }
+    let signUpButton = UIButton().then {
+        $0.setAttributedTitle(NSAttributedString(string: "피어나 회원가입", attributes: [
+            .font: UIFont.spoqaBold(15),
+            .foregroundColor: UIColor(named: "textPink")!,
+            .kern: -0.15
+        ]), for: .normal)
+        $0.layer.cornerRadius = 24
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor(named: "peachyPinkTwo")!.cgColor
+    }
     let beforeSignInButton = UIButton().then {
         $0.setAttributedTitle(NSAttributedString(string: "로그인 전 둘러보기", attributes: [
             .font: UIFont.spoqaRegular(14),
@@ -37,6 +47,11 @@ class CommonViewController: UIViewController {
         setupBaseLabel()
         setupBeforeSignInButton()
         setupUnderLine()
+        setupSignUpButton()
+    }
+    
+    @objc func clickSignUpButton(_ sender: UIButton) {
+        // todo
     }
     
     @objc func clickBeforeSignInButton(_ sender: UIButton) {
@@ -54,6 +69,18 @@ extension CommonViewController {
         baseLabel.translatesAutoresizingMaskIntoConstraints = false
         baseLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 72).isActive = true
         baseLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
+    }
+    
+    // MARK: SignUp Button
+    func setupSignUpButton() {
+        signUpButton.addTarget(self, action: #selector(clickSignUpButton(_:)), for: .touchUpInside)
+        self.view.addSubview(signUpButton)
+        
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        signUpButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40).isActive = true
+        signUpButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        signUpButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        signUpButton.bottomAnchor.constraint(equalTo: beforeSignInButton.topAnchor, constant: -13).isActive = true
     }
     
     // MARK: Before SignIn Button
