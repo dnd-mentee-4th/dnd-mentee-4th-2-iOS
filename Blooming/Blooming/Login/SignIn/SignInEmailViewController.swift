@@ -52,6 +52,37 @@ class SignInEmailViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        guard let bottom = nextButtonBottom else { return }
+        DispatchQueue.main.async {
+            bottom.constant = -16 - 291
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        guard let bottom = nextButtonBottom else { return }
+        DispatchQueue.main.async {
+            bottom.constant = -60
+        }
+    }
+    
     func setupView() {
         self.view.backgroundColor = UIColor(named: "white02")!
         setupWelcomeLabel()
@@ -59,16 +90,6 @@ class SignInEmailViewController: UIViewController {
         setupEmailField()
         setupUnderLine()
         setupNextButton()
-    }
-    
-    func setupNextButtonOnBottom() {
-        guard let bottom = nextButtonBottom else { return }
-        bottom.constant = -60
-    }
-    
-    func setupNextButtonOnKeyboard() {
-        guard let bottom = nextButtonBottom else { return }
-        bottom.constant = -60 - 291 // 키보드 높이 구하기
     }
     
     @objc func clickNextButton(_ sender: UIButton) {
@@ -124,10 +145,9 @@ extension SignInEmailViewController {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
         nextButtonBottom = nextButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        nextButtonBottom?.constant = -60
         nextButtonBottom?.isActive = true
         nextButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
         nextButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -21).isActive = true
-        
-        setupNextButtonOnBottom()
     }
 }
