@@ -70,6 +70,24 @@ class SignInPasswordViewController: UIViewController {
             self?.signInButton.isEnabled = value
             self?.signInButton.backgroundColor = value ? UIColor(named: "peachyPinkTwo")! : UIColor(named: "grey04")!
         }).disposed(by: disposeBag)
+        
+        viewModel?.output.isSuccessSignIn.subscribe(onNext: { [weak self] value in
+            if value {
+                // todo - 로그인 상태 저장
+                self?.navigationController?.dismiss(animated: true, completion: nil)
+                return
+            }
+            self?.setupValidateFailView()
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setupValidateFailView() {
+        passwordField.text = ""
+        signInButton.isEnabled = false
+        signInButton.backgroundColor = UIColor(named: "grey04")!
+        wrongLabel.isHidden = false
+        forgotButton.isHidden = false
+        forgotUnderLine.isHidden = false
     }
     
     // MARK: objc func
@@ -97,6 +115,7 @@ class SignInPasswordViewController: UIViewController {
     }
     
     @objc func clickSignInButton(_ sender: UIButton) {
+        self.view.endEditing(true)
         viewModel?.requestSignIn()
     }
 
