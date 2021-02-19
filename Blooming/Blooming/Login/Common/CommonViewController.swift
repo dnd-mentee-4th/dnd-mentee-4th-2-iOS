@@ -61,7 +61,9 @@ class CommonViewController: UIViewController {
     }
     
     @objc func clickSignInButton(_ sender: UIButton) {
-        // todo
+        let nextVC = SignInEmailViewController()
+        nextVC.viewModel = SignInViewModel()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @objc func clickSignUpButton(_ sender: UIButton) {
