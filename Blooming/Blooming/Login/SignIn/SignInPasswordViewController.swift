@@ -20,10 +20,24 @@ class SignInPasswordViewController: UIViewController {
     let signInButton = UIButton()
     var signInButtonBottom: NSLayoutConstraint?
 
+    // MARK: override
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,6 +52,27 @@ class SignInPasswordViewController: UIViewController {
         setupBaseLabel()
         setupPasswordField()
         setupUnderLine()
+        setupSignInButton()
+    }
+    
+    // MARK: objc func
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        guard let bottom = signInButtonBottom else { return }
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            
+            DispatchQueue.main.async {
+                bottom.constant = -16 - keyboardHeight
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        guard let bottom = signInButtonBottom else { return }
+        DispatchQueue.main.async {
+            bottom.constant = -60
+        }
     }
     
     @objc func clickBackButton(_ sender: UIButton) {
