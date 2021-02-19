@@ -26,6 +26,7 @@
 		EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE950A25DEE3FE008F0D1D /* CommonViewController.swift */; };
 		EEAE951A25DEF0BE008F0D1D /* SignInEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE951925DEF0BE008F0D1D /* SignInEmailViewController.swift */; };
 		EEAE952B25DF584D008F0D1D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE952A25DF584D008F0D1D /* SignInViewModel.swift */; };
+		EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */; };
 		EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */; };
 		EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */; };
 		EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */; };
@@ -81,6 +82,7 @@
 		EEAE950A25DEE3FE008F0D1D /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		EEAE951925DEF0BE008F0D1D /* SignInEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewController.swift; sourceTree = "<group>"; };
 		EEAE952A25DF584D008F0D1D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswordViewController.swift; sourceTree = "<group>"; };
 		EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHome.swift; sourceTree = "<group>"; };
 		EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				EEAE951925DEF0BE008F0D1D /* SignInEmailViewController.swift */,
 				EEAE952A25DF584D008F0D1D /* SignInViewModel.swift */,
+				EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
 				EEAE951A25DEF0BE008F0D1D /* SignInEmailViewController.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
+				EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */,
 				EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */,
 				EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */,
 			);
