@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class SignInViewModel {
+    private let predicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
     private let disposeBag = DisposeBag()
     let input = Input()
     let output = Output()
@@ -28,16 +29,13 @@ class SignInViewModel {
     }
     
     init() {
-        input.email.filter { !$0.isEmpty }.subscribe(onNext: { [weak self] email in
+        input.email.subscribe(onNext: { [weak self] email in
             self?.emailValidate(email)
         }).disposed(by: disposeBag)
     }
     
     private func emailValidate(_ email: String) {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        output.isEnableNextButton.accept(
-            NSPredicate(format:"SELF MATCHES %@", emailRegex).evaluate(with: email)
-        )
+        output.isEnableNextButton.accept( predicate.evaluate(with: email) )
     }
     
     private func passwordValidate(_ password: String) {

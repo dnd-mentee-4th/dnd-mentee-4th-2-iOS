@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class SignInEmailViewController: UIViewController {
+    private let disposeBag = DisposeBag()
+    var viewModel: SignInViewModel?
+    
     let welcomeLabel = UILabel().then {
         $0.attributedText = NSAttributedString(string: "반가워요 :)", attributes: [
             .font: UIFont.spoqaBold(26),
@@ -46,13 +50,8 @@ class SignInEmailViewController: UIViewController {
     }
     
     var nextButtonBottom: NSLayoutConstraint?
-    var isEnableButton: Bool = false {
-        didSet {
-            nextButton.isEnabled = oldValue
-            nextButton.backgroundColor = oldValue ? UIColor(named: "peachyPinkTwo")! : UIColor(named: "grey04")!
-        }
-    }
 
+    // MARK: override
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +61,7 @@ class SignInEmailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        bindViewModel()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -76,6 +76,27 @@ class SignInEmailViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func setupView() {
+        self.view.backgroundColor = UIColor(named: "white02")!
+        setupWelcomeLabel()
+        setupBaseLabel()
+        setupEmailField()
+        setupUnderLine()
+        setupNextButton()
+    }
+    
+    func bindViewModel() {
+        emailField.rx.text.orEmpty
+            .bind(to: viewModel!.input.email)
+            .disposed(by: disposeBag)
+        
+        viewModel?.output.isEnableNextButton.subscribe(onNext: { [weak self] value in
+            self?.nextButton.isEnabled = value
+            self?.nextButton.backgroundColor = value ? UIColor(named: "peachyPinkTwo")! : UIColor(named: "grey04")!
+        }).disposed(by: disposeBag)
+    }
+    
+    // MARK: objc func
     @objc func keyboardWillShow(_ notification: NSNotification) {
         guard let bottom = nextButtonBottom else { return }
         DispatchQueue.main.async {
@@ -88,15 +109,6 @@ class SignInEmailViewController: UIViewController {
         DispatchQueue.main.async {
             bottom.constant = -60
         }
-    }
-    
-    func setupView() {
-        self.view.backgroundColor = UIColor(named: "white02")!
-        setupWelcomeLabel()
-        setupBaseLabel()
-        setupEmailField()
-        setupUnderLine()
-        setupNextButton()
     }
     
     @objc func clickNextButton(_ sender: UIButton) {
