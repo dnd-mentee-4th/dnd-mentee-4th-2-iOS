@@ -16,6 +16,9 @@ class SignInPasswordViewController: UIViewController {
     let baseLabel = UILabel()
     let passwordField = UITextField()
     let underLine = UIView()
+    
+    let signInButton = UIButton()
+    var signInButtonBottom: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +36,16 @@ class SignInPasswordViewController: UIViewController {
         setupBackButton()
         setupWelcomeLabel()
         setupBaseLabel()
-        setupEmailField()
+        setupPasswordField()
         setupUnderLine()
     }
     
     @objc func clickBackButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func clickSignInButton(_ sender: UIButton) {
+        viewModel?.requestSignIn()
     }
 
 }
@@ -87,7 +94,7 @@ extension SignInPasswordViewController {
     }
     
     // MARK: Password Field
-    func setupEmailField() {
+    func setupPasswordField() {
         passwordField.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [
             .font: UIFont.spoqaMedium(18),
             .foregroundColor: UIColor(named: "grey05")!,
@@ -114,5 +121,26 @@ extension SignInPasswordViewController {
         underLine.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 8).isActive = true
         underLine.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
         underLine.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -21).isActive = true
+    }
+    
+    // MARK: SignIn Button
+    func setupSignInButton() {
+        signInButton.setAttributedTitle(NSAttributedString(string: "로그인", attributes: [
+            .font: UIFont.spoqaBold(15),
+            .foregroundColor: UIColor.white,
+            .kern: -0.15
+        ]), for: .normal)
+        signInButton.backgroundColor = UIColor(named: "peachyPinkTwo")!
+        signInButton.layer.cornerRadius = 24
+        signInButton.addTarget(self, action: #selector(clickSignInButton(_:)), for: .touchUpInside)
+        self.view.addSubview(signInButton)
+        
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        signInButtonBottom = signInButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        signInButtonBottom?.constant = -60
+        signInButtonBottom?.isActive = true
+        signInButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
+        signInButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -21).isActive = true
     }
 }
