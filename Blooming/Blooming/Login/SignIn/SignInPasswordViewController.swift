@@ -16,6 +16,7 @@ class SignInPasswordViewController: UIViewController {
     let baseLabel = UILabel()
     let passwordField = UITextField()
     let underLine = UIView()
+    let wrongLabel = UILabel()
     
     let signInButton = UIButton()
     var signInButtonBottom: NSLayoutConstraint?
@@ -52,6 +53,7 @@ class SignInPasswordViewController: UIViewController {
         setupBaseLabel()
         setupPasswordField()
         setupUnderLine()
+        setupWrongLabel()
         setupSignInButton()
     }
     
@@ -156,6 +158,20 @@ extension SignInPasswordViewController {
         underLine.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 8).isActive = true
         underLine.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 21).isActive = true
         underLine.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -21).isActive = true
+    }
+    
+    // MARK: Wrong Label
+    func setupWrongLabel() {
+        wrongLabel.attributedText = NSAttributedString(string: "이메일 혹은 비밀번호가 틀렸어요", attributes: [
+            .font: UIFont.spoqaRegular(14),
+            .foregroundColor: UIColor.systemRed,
+            .kern: -0.14
+        ])
+        self.view.addSubview(wrongLabel)
+        
+        wrongLabel.translatesAutoresizingMaskIntoConstraints = false
+        wrongLabel.topAnchor.constraint(equalTo: underLine.bottomAnchor, constant: 30).isActive = true
+        wrongLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
     // MARK: SignIn Button
