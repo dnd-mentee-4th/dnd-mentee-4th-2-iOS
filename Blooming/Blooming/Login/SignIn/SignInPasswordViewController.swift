@@ -17,7 +17,8 @@ class SignInPasswordViewController: UIViewController {
     let passwordField = UITextField()
     let underLine = UIView()
     let wrongLabel = UILabel()
-    
+    let forgotButton = UIButton()
+    let forgotUnderLine = UIView()
     let signInButton = UIButton()
     var signInButtonBottom: NSLayoutConstraint?
 
@@ -54,6 +55,8 @@ class SignInPasswordViewController: UIViewController {
         setupPasswordField()
         setupUnderLine()
         setupWrongLabel()
+        setupForgotButton()
+        setupForgotUnderLine()
         setupSignInButton()
     }
     
@@ -167,11 +170,40 @@ extension SignInPasswordViewController {
             .foregroundColor: UIColor.systemRed,
             .kern: -0.14
         ])
+        wrongLabel.isHidden = false
         self.view.addSubview(wrongLabel)
         
         wrongLabel.translatesAutoresizingMaskIntoConstraints = false
         wrongLabel.topAnchor.constraint(equalTo: underLine.bottomAnchor, constant: 30).isActive = true
         wrongLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
+    
+    // MARK: Forgot Button
+    func setupForgotButton() {
+        forgotButton.setAttributedTitle(NSAttributedString(string: "비밀번호를 잊으셨나요?", attributes: [
+            .font: UIFont.spoqaRegular(14),
+            .foregroundColor: UIColor(named: "grey02")!,
+            .kern: -0.14
+        ]), for: .normal)
+        forgotButton.isHidden = true
+        self.view.addSubview(forgotButton)
+        
+        forgotButton.translatesAutoresizingMaskIntoConstraints = false
+        forgotButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        forgotButton.topAnchor.constraint(equalTo: wrongLabel.bottomAnchor).isActive = true
+        forgotButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
+    
+    func setupForgotUnderLine() {
+        forgotUnderLine.backgroundColor = UIColor(named: "grey02")!
+        forgotUnderLine.isHidden = true
+        self.view.addSubview(forgotUnderLine)
+        
+        forgotUnderLine.translatesAutoresizingMaskIntoConstraints = false
+        forgotUnderLine.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        forgotUnderLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        forgotUnderLine.topAnchor.constraint(equalTo: forgotButton.bottomAnchor, constant: -11).isActive = true
+        forgotUnderLine.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
     // MARK: SignIn Button
