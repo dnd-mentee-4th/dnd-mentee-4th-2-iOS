@@ -32,6 +32,7 @@ class SignInPasswordViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        bindViewModel()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -58,6 +59,17 @@ class SignInPasswordViewController: UIViewController {
         setupForgotButton()
         setupForgotUnderLine()
         setupSignInButton()
+    }
+    
+    func bindViewModel() {
+        passwordField.rx.text.orEmpty
+            .bind(to: viewModel!.input.password)
+            .disposed(by: disposeBag)
+        
+        viewModel?.output.isEnableSignInButton.subscribe(onNext: { [weak self] value in
+            self?.signInButton.isEnabled = value
+            self?.signInButton.backgroundColor = value ? UIColor(named: "peachyPinkTwo")! : UIColor(named: "grey04")!
+        }).disposed(by: disposeBag)
     }
     
     // MARK: objc func

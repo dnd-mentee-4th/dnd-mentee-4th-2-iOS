@@ -86,7 +86,7 @@ extension SignInPasswordViewController {
             .foregroundColor: UIColor.systemRed,
             .kern: -0.14
         ])
-        wrongLabel.isHidden = false
+        wrongLabel.isHidden = true
         self.view.addSubview(wrongLabel)
         
         wrongLabel.translatesAutoresizingMaskIntoConstraints = false
