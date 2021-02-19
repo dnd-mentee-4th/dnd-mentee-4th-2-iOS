@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class SignInViewModel {
+    private let disposeBag = DisposeBag()
     let input = Input()
     let output = Output()
     
@@ -23,5 +24,28 @@ class SignInViewModel {
         let isEnableSignInButton = BehaviorRelay<Bool>(value: false)
         let isHiddenWrongLabel = BehaviorRelay<Bool>(value: true)
         let isHiddenForgotPasswordButton = BehaviorRelay<Bool>(value: true)
+        let isSuccessSignIn = PublishRelay<Bool>()
+    }
+    
+    init() {
+        input.email.filter { !$0.isEmpty }.subscribe(onNext: { [weak self] email in
+            self?.emailValidate(email)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func emailValidate(_ email: String) {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        output.isEnableNextButton.accept(
+            NSPredicate(format:"SELF MATCHES %@", emailRegex).evaluate(with: email)
+        )
+    }
+    
+    private func passwordValidate(_ password: String) {
+        // todo
+    }
+    
+    private func requestSignIn() {
+        // todo - 성공하면 isSuccessSignIn에 true 발행
+        // todo - 성공하지 못하면 isSuccessSignIn에 false 발행, isHiddenWrongLabel과 isHiddenForgotPasswordButton에 false 발행
     }
 }
