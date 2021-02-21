@@ -61,6 +61,7 @@ class FlowerHome: UIView {
 extension FlowerHome {
     // MARK: Percentage Label
     private func setupPercentageLabel() {
+        percentageLabel.numberOfLines = 0
         percentageLabel.attributedText = getEmptyPercentageText(color: UIColor.systemGreen)
         self.addSubview(percentageLabel)
         
@@ -97,10 +98,10 @@ extension FlowerHome {
     // MARK: Activity Button
     private func setupActivityButton() {
         activityButton.setImage(UIImage(named: "ic_btn_primary"), for: .normal)
-        activityButton.layer.shadowRadius = 10
+        activityButton.layer.shadowRadius = 15
         activityButton.layer.shadowColor = UIColor(named: "blackTwo")?.cgColor
         activityButton.layer.shadowOffset = CGSize(width: 0, height: 10)
-        activityButton.layer.shadowOpacity = 0.7
+        activityButton.layer.shadowOpacity = 0.1
         activityButton.addTarget(self, action: #selector(clickActivityButton(_:)), for: .touchUpInside)
         self.addSubview(activityButton)
         
