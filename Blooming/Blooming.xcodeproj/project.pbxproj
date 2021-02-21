@@ -10,6 +10,10 @@
 		47916B523EBDB108389108AC /* Pods_BloomingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01863A760424904EB381B7BD /* Pods_BloomingTests.framework */; };
 		63DFA20ABA7CEC37E1A50122 /* Pods_EchoNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C207C72D9B71641DD8411FC /* Pods_EchoNoteTests.framework */; };
 		D359C54005E03A6902A7972C /* Pods_Blooming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2161D749E3D35E54BE7E21DE /* Pods_Blooming.framework */; };
+		EE11FD6D25E1EBA400EF23F4 /* LoginBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD6C25E1EBA400EF23F4 /* LoginBody.swift */; };
+		EE11FD7525E1EBAF00EF23F4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */; };
+		EE11FD7A25E1EC0100EF23F4 /* requestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */; };
+		EE11FD7F25E1EC4800EF23F4 /* URLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7E25E1EC4800EF23F4 /* URLString.swift */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
 		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
 		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
@@ -61,6 +65,10 @@
 		7A36A3FA6154D9635B0DA21C /* Pods-Blooming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blooming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blooming/Pods-Blooming.debug.xcconfig"; sourceTree = "<group>"; };
 		8CF84CE00976A23785C92F02 /* Pods-Blooming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blooming.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blooming/Pods-Blooming.release.xcconfig"; sourceTree = "<group>"; };
 		DC5E6CE52E011A7A11BBD585 /* Pods_EchoNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EchoNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE11FD6C25E1EBA400EF23F4 /* LoginBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBody.swift; sourceTree = "<group>"; };
+		EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLogin.swift; sourceTree = "<group>"; };
+		EE11FD7E25E1EC4800EF23F4 /* URLString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLString.swift; sourceTree = "<group>"; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
 		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
@@ -131,6 +139,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE11FD6725E1EB5A00EF23F4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE11FD6B25E1EB7500EF23F4 /* Model */,
+				EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */,
+				EE11FD7E25E1EC4800EF23F4 /* URLString.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EE11FD6B25E1EB7500EF23F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE11FD6C25E1EBA400EF23F4 /* LoginBody.swift */,
+				EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EE15321925C2E033008E471E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +205,7 @@
 		EE3D537325B298800064C274 /* Blooming */ = {
 			isa = PBXGroup;
 			children = (
+				EE11FD6725E1EB5A00EF23F4 /* Data */,
 				EEEF8A3E25CED2F400CFC0E5 /* Font */,
 				EE8DFA8925C50F4E0025EE54 /* View */,
 				EEAE950825DEE3E2008F0D1D /* Login */,
@@ -542,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */,
+				EE11FD6D25E1EBA400EF23F4 /* LoginBody.swift in Sources */,
 				EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */,
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
@@ -549,12 +578,15 @@
 				EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */,
 				EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */,
 				EEAE954425DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift in Sources */,
+				EE11FD7A25E1EC0100EF23F4 /* requestLogin.swift in Sources */,
+				EE11FD7F25E1EC4800EF23F4 /* URLString.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
 				EEAE951A25DEF0BE008F0D1D /* SignInEmailViewController.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
 				EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */,
 				EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */,
+				EE11FD7525E1EBAF00EF23F4 /* LoginResponse.swift in Sources */,
 				EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
