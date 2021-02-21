@@ -69,7 +69,7 @@ extension FlowerHome {
     // MARK: Percentage Label
     private func setupPercentageLabel() {
         percentageLabel.numberOfLines = 0
-        percentageLabel.attributedText = getEmptyPercentageText(color: UIColor.systemGreen)
+        percentageLabel.attributedText = getEmptyPercentageText(color: UIColor(named: "regularGreen")!)
         self.addSubview(percentageLabel)
         
         percentageLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +118,6 @@ extension FlowerHome {
           .foregroundColor: UIColor(named: "grey03")!,
           .kern: -0.16
         ])
-        attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 16), range: NSRange(location: 3, length: 3))
 
         return attributedString
     }
