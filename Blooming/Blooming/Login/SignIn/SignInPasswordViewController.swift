@@ -73,7 +73,6 @@ class SignInPasswordViewController: UIViewController {
         
         viewModel?.output.isSuccessSignIn.subscribe(onNext: { [weak self] value in
             if value {
-                // todo - 로그인 상태 저장
                 self?.navigationController?.dismiss(animated: true, completion: nil)
                 return
             }

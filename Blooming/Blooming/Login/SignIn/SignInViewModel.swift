@@ -50,7 +50,10 @@ class SignInViewModel {
     }
     
     func requestSignIn() {
-        // todo - 성공하면 isSuccessSignIn에 true 발행
-        // todo - 성공하지 못하면 isSuccessSignIn에 false 발행, isHiddenWrongLabel과 isHiddenForgotPasswordButton에 false 발행
+        requestLogin(email, password).subscribe(
+            onNext: { [weak self] value in
+                self?.output.isSuccessSignIn.accept(value)
+            }
+        ).disposed(by: disposeBag)
     }
 }
