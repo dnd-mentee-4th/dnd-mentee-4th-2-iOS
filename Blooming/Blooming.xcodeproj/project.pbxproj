@@ -33,6 +33,7 @@
 		EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */; };
 		EEAE954425DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE954325DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift */; };
 		EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */; };
+		EEECC7EB25D40FBF00C361CE /* FlowerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */; };
 		EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */; };
 		EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */; };
 		EEEF8A7B25CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */; };
@@ -94,6 +95,7 @@
 		EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswordViewController.swift; sourceTree = "<group>"; };
 		EEAE954325DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInPasswordViewController+UI.swift"; sourceTree = "<group>"; };
 		EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHome.swift; sourceTree = "<group>"; };
+		EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerHome.swift; sourceTree = "<group>"; };
 		EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
 		EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */,
 				EE8DFAB325C5151C0025EE54 /* QuizButton.swift */,
 				EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */,
+				EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 			files = (
 				EE8DFAB425C5151C0025EE54 /* QuizButton.swift in Sources */,
 				EE11FD6D25E1EBA400EF23F4 /* LoginBody.swift in Sources */,
+				EEECC7EB25D40FBF00C361CE /* FlowerHome.swift in Sources */,
 				EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */,
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
