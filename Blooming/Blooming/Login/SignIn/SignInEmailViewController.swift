@@ -112,7 +112,10 @@ class SignInEmailViewController: UIViewController {
     }
     
     @objc func clickNextButton(_ sender: UIButton) {
-        // todo
+        self.view.endEditing(true)
+        let nextVC = SignInPasswordViewController()
+        nextVC.viewModel = self.viewModel
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
 }
