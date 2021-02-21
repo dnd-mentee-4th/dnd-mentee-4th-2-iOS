@@ -66,6 +66,18 @@ extension HomeViewController {
         logoutHome.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
     }
     
+    // MARK: Flower Home
+    func setupFlowerHome() {
+        flowerHome.delegate = self
+        containerView.addSubview(flowerHome)
+        
+        flowerHome.translatesAutoresizingMaskIntoConstraints = false
+        flowerHome.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        flowerHome.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+        flowerHome.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        flowerHome.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+    }
+    
     // MARK: Quiz Button
     func setupQuizButton() {
         quizButton.currentTime = getCurrentTime()

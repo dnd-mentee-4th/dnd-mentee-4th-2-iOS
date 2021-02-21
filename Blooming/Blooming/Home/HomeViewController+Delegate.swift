@@ -44,3 +44,9 @@ extension HomeViewController: LogoutHomeProtocol {
         self.show(nextVC, sender: self)
     }
 }
+
+extension HomeViewController: FlowerHomeDelegate {
+    func clickActivityButton() {
+        // todo - 카메라 화면 띄우기
+    }
+}
