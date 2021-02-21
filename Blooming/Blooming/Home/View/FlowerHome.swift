@@ -17,8 +17,15 @@ struct Flower {
     }
 }
 
+protocol FlowerHomeDelegate: class {
+    func clickActivityButton()
+}
+
 class FlowerHome: UIView {
     let percentageLabel = UILabel()
+    let activityButton = UIButton()
+    
+    weak var delegate: FlowerHomeDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +41,7 @@ class FlowerHome: UIView {
     
     func setupView() {
         setupPercentageLabel()
+        setupActivityButton()
     }
     
     func setFlowerInfo(flower: Flower) {
@@ -43,10 +51,15 @@ class FlowerHome: UIView {
         }
         percentageLabel.attributedText = getFlowerPercentageText(color: UIColor(named: flower.color)!, title: flower.title, percent: flower.percent)
     }
+    
+    @objc func clickActivityButton(_ sender: UIButton) {
+        delegate?.clickActivityButton()
+    }
 }
 
 // MARK: +UI
 extension FlowerHome {
+    // MARK: Percentage Label
     private func setupPercentageLabel() {
         percentageLabel.attributedText = getEmptyPercentageText(color: UIColor.systemGreen)
         self.addSubview(percentageLabel)
@@ -79,5 +92,22 @@ extension FlowerHome {
         ], range: NSRange(location: 7, length: String(percent).count + 1))
         
         return attributedString
+    }
+    
+    // MARK: Activity Button
+    private func setupActivityButton() {
+        activityButton.setImage(UIImage(named: "ic_btn_primary"), for: .normal)
+        activityButton.layer.shadowRadius = 10
+        activityButton.layer.shadowColor = UIColor(named: "blackTwo")?.cgColor
+        activityButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        activityButton.layer.shadowOpacity = 0.7
+        activityButton.addTarget(self, action: #selector(clickActivityButton(_:)), for: .touchUpInside)
+        self.addSubview(activityButton)
+        
+        activityButton.translatesAutoresizingMaskIntoConstraints = false
+        activityButton.widthAnchor.constraint(equalToConstant: 111).isActive = true
+        activityButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        activityButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        activityButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -54).isActive = true
     }
 }
