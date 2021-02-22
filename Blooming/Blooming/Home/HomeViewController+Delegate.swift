@@ -9,7 +9,7 @@ import UIKit
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tabItems.count
+        return missionTabItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -17,15 +17,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return TabButtonCollectionCell()
         }
         
-        cell.setButtonInformatin(item: self.tabItems[indexPath.item])
+        cell.setButtonInformatin(item: missionTabItems[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         if indexPath.item == self.selectedTabButtonIndex { return true }
         
-        tabItems[self.selectedTabButtonIndex].isSelected = false
-        tabItems[indexPath.item].isSelected = true
+        missionTabItems[self.selectedTabButtonIndex].isSelected = false
+        missionTabItems[indexPath.item].isSelected = true
         
         self.selectedTabButtonIndex = indexPath.item
         // todo - 선택된 아이템에 따른 처리
@@ -42,5 +42,11 @@ extension HomeViewController: LogoutHomeProtocol {
         nextVC.isNavigationBarHidden = true
         nextVC.modalPresentationStyle = .fullScreen
         self.show(nextVC, sender: self)
+    }
+}
+
+extension HomeViewController: FlowerHomeDelegate {
+    func clickActivityButton() {
+        // todo - 카메라 화면 띄우기
     }
 }

@@ -8,14 +8,6 @@
 import UIKit
 import Then
 
-struct TabItem {
-    var isSelected: Bool = false
-    var title: String
-    var textColor: String
-    var image: String
-    var strokeColor: String?
-}
-
 class TabButtonCollectionCell: UICollectionViewCell {
     static let identifier = "TabButtonCollectionCell"
     private let titleLabel = UILabel()
@@ -51,11 +43,11 @@ class TabButtonCollectionCell: UICollectionViewCell {
         setupImageView()
     }
     
-    func setButtonInformatin(item: TabItem) {
+    func setButtonInformatin(item: MissionTab) {
         imageView.image = UIImage(named: item.image)
         if item.isSelected {
-            titleLabel.attributedText = getAttributedText(text: item.title, color: UIColor(named: item.textColor)!)
-            self.layer.borderColor = UIColor(named: (item.strokeColor ?? item.textColor))!.cgColor
+            titleLabel.attributedText = getAttributedText(text: item.title, color: UIColor(named: item.tabTextColor)!)
+            self.layer.borderColor = UIColor(named: (item.strokeColor ?? item.tabTextColor))!.cgColor
         } else {
             titleLabel.attributedText = getAttributedText(text: item.title, color: UIColor(named: "grey01")!)
             self.layer.borderColor = UIColor.white.cgColor
