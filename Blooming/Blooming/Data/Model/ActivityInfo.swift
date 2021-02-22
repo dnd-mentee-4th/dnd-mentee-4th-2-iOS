@@ -10,7 +10,7 @@ import Foundation
 struct ActivityInfo: Codable {
     var id: Int
     var imageUrl: String
-    var dateTime: Date
+    var dateTime: String
     var missionType: String
     
     enum CodingKeys: String, CodingKey {

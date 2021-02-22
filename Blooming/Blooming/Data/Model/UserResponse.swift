@@ -8,19 +8,20 @@
 import Foundation
 
 struct UserResponse: Codable {
-    var profileImage: String
-    var point: Int
-    var level: Int
-    var badge: [Int]
-    var repBadge: Int
-    var id: String
-    var email: String
-    var password: String
-    var nick: String
-    var mission: [MissionInfo]
-    var activity: [ActivityInfo]
-    var createdDate: Date
-    var updatedDate: Date
+    var error: String?
+    var profileImage: String?
+    var point: Int?
+    var level: Int?
+    var badge: [Int]?
+    var repBadge: Int?
+    var id: String?
+    var email: String?
+    var password: String?
+    var nick: String?
+    var mission: [MissionInfo]?
+    var activity: [ActivityInfo]?
+    var createdDate: String?
+    var updatedDate: String?
 //    var v: Int
     
     enum CodingKeys: String, CodingKey {
