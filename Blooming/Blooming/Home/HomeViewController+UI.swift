@@ -61,6 +61,7 @@ extension HomeViewController {
     // MARK: Logout Home
     func setupLogoutHome() {
         logoutHome.delegate = self
+        flowerHome.removeFromSuperview()
         containerView.addSubview(logoutHome)
         
         logoutHome.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +74,7 @@ extension HomeViewController {
     // MARK: Flower Home
     func setupFlowerHome() {
         flowerHome.delegate = self
+        logoutHome.removeFromSuperview()
         containerView.addSubview(flowerHome)
         
         flowerHome.translatesAutoresizingMaskIntoConstraints = false

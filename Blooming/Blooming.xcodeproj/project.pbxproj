@@ -20,6 +20,7 @@
 		EE11FDD025E344C500EF23F4 /* requestUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDCF25E344C500EF23F4 /* requestUserInfo.swift */; };
 		EE11FDD525E34A2C00EF23F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDD425E34A2C00EF23F4 /* HomeViewModel.swift */; };
 		EE11FDDB25E34B1400EF23F4 /* MissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDDA25E34B1400EF23F4 /* MissionType.swift */; };
+		EE11FDE025E3522000EF23F4 /* MissionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDDF25E3522000EF23F4 /* MissionTab.swift */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
 		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
 		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
@@ -82,6 +83,7 @@
 		EE11FDCF25E344C500EF23F4 /* requestUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestUserInfo.swift; sourceTree = "<group>"; };
 		EE11FDD425E34A2C00EF23F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EE11FDDA25E34B1400EF23F4 /* MissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionType.swift; sourceTree = "<group>"; };
+		EE11FDDF25E3522000EF23F4 /* MissionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTab.swift; sourceTree = "<group>"; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
 		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				EE8DFA8A25C50F600025EE54 /* CircleProgressBar.swift */,
 				EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */,
+				EE11FDDF25E3522000EF23F4 /* MissionTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
 				EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */,
 				EE11FDCA25E3445200EF23F4 /* ActivityInfo.swift in Sources */,
+				EE11FDE025E3522000EF23F4 /* MissionTab.swift in Sources */,
 				EE11FDDB25E34B1400EF23F4 /* MissionType.swift in Sources */,
 				EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */,
 				EE11FD7525E1EBAF00EF23F4 /* LoginResponse.swift in Sources */,
