@@ -49,6 +49,13 @@ class HomeViewModel {
     }
     
     func requestLoginStatus() {
-        // todo
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            output.loginStatus.accept(false)
+            return
+        }
+        requestUserInfo(token: token).subscribe(onNext: { [weak self] value in
+            if value.error == nil { self?.output.loginStatus.accept(true) }
+            else { self?.output.loginStatus.accept(false) }
+        }).disposed(by: disposeBag)
     }
 }
