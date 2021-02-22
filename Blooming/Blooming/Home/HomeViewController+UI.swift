@@ -10,6 +10,8 @@ import UIKit
 extension HomeViewController {
     // MARK: Mypage Button
     func setupMypageButton() {
+        mypageButton.setBackgroundImage(UIImage(named: "ic_btn_my"), for: .normal)
+        mypageButton.contentMode = .scaleAspectFit
         self.view.addSubview(mypageButton)
         
         mypageButton.translatesAutoresizingMaskIntoConstraints = false
@@ -30,6 +32,8 @@ extension HomeViewController {
     }
     
     func setupTabButtonCollectionViewSetting() {
+        flowLayout.estimatedItemSize = CGSize(width: 100, height: 45)
+        flowLayout.scrollDirection = .horizontal
         tabButtonCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
             .then {
                 $0.register(TabButtonCollectionCell.self, forCellWithReuseIdentifier: TabButtonCollectionCell.identifier)
@@ -78,22 +82,27 @@ extension HomeViewController {
         flowerHome.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
     }
     
-    // MARK: Quiz Button
-    func setupQuizButton() {
-        quizButton.currentTime = getCurrentTime()
-        self.view.addSubview(quizButton)
-        
-        quizButton.translatesAutoresizingMaskIntoConstraints = false
-        quizButton.widthAnchor.constraint(equalToConstant: 56).isActive = true
-        quizButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        quizButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
-        quizButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
-    }
+    // MARK: Quiz Button (추가구현)
+//    func setupQuizButton() {
+//        quizButton.currentTime = getCurrentTime()
+//        quizButton.layer.shadowOpacity = 0.1
+//        quizButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+//        quizButton.layer.shadowRadius = 10
+//        quizButton.layer.shadowColor = UIColor.black.cgColor
+//        quizButton.isHidden = true // todo - 로그인 여부에 따라, 퀴즈 풀이 여부에 따라 달라져야 합니다.
+//        self.view.addSubview(quizButton)
+//
+//        quizButton.translatesAutoresizingMaskIntoConstraints = false
+//        quizButton.widthAnchor.constraint(equalToConstant: 56).isActive = true
+//        quizButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+//        quizButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+//        quizButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50).isActive = true
+//    }
     
-    func getCurrentTime() -> Float {
-        let date = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
-        return Float((components.hour ?? 0) * 60 + (components.minute ?? 0))
-    }
+//    func getCurrentTime() -> Float {
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.hour, .minute, .second], from: date)
+//        return Float((components.hour ?? 0) * 60 + (components.minute ?? 0))
+//    }
 }

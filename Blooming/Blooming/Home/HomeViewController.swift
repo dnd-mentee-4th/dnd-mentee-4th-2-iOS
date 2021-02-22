@@ -6,36 +6,17 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     let mypageButton = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
-        .then {
-            $0.setBackgroundImage(UIImage(named: "ic_btn_my"), for: .normal)
-            $0.contentMode = .scaleAspectFit
-        }
     var tabButtonCollectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
-        .then {
-            $0.estimatedItemSize = CGSize(width: 100, height: 45)
-            $0.scrollDirection = .horizontal
-        }
-    let quizButton = QuizButton()
-        .then {
-            $0.layer.shadowOpacity = 0.1
-            $0.layer.shadowOffset = CGSize(width: 0, height: 5)
-            $0.layer.shadowRadius = 10
-            $0.layer.shadowColor = UIColor.black.cgColor
-            $0.isHidden = true // todo - 로그인 여부에 따라, 퀴즈 풀이 여부에 따라 달라져야 합니다.
-        }
+//    let quizButton = QuizButton() // 추가구현
     let containerView = UIView()
     let logoutHome = LogoutHome()
     let flowerHome = FlowerHome()
-    
-    var isQuizHidden: Bool = false {
-        didSet {
-            quizButton.isHidden = isQuizHidden
-        }
-    }
     
     // todo - tabItems는 나중에 API 데이터로 대체하던가 뷰모델에서 처리하던가 해야 합니다.
     var tabItems: [TabItem] = [
@@ -61,9 +42,10 @@ class HomeViewController: UIViewController {
         setupMypageButton()
         setupTabButtonCollectionView()
         setupContainerView()
-        setupQuizButton()
+//        setupQuizButton() // 추가구현
         
         setupLogoutHome() // todo - 이후 viewmodel의 로그인 여부 상태에 따라 적용해줘야 합니다.
+//        setupFlowerHome()
     }
     
     func bindViewModel() {

@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 class HomeViewModel {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     let input = Input()
     let output = Output()
     
