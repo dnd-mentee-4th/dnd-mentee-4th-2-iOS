@@ -21,6 +21,7 @@
 		EE11FDD525E34A2C00EF23F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDD425E34A2C00EF23F4 /* HomeViewModel.swift */; };
 		EE11FDDB25E34B1400EF23F4 /* MissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDDA25E34B1400EF23F4 /* MissionType.swift */; };
 		EE11FDE025E3522000EF23F4 /* MissionTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDDF25E3522000EF23F4 /* MissionTab.swift */; };
+		EE11FDF125E355F600EF23F4 /* HelloMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDF025E355F600EF23F4 /* HelloMessage.swift */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
 		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
 		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
@@ -84,6 +85,7 @@
 		EE11FDD425E34A2C00EF23F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EE11FDDA25E34B1400EF23F4 /* MissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionType.swift; sourceTree = "<group>"; };
 		EE11FDDF25E3522000EF23F4 /* MissionTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTab.swift; sourceTree = "<group>"; };
+		EE11FDF025E355F600EF23F4 /* HelloMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMessage.swift; sourceTree = "<group>"; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
 		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				EE8DFAB325C5151C0025EE54 /* QuizButton.swift */,
 				EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */,
 				EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */,
+				EE11FDF025E355F600EF23F4 /* HelloMessage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				EE11FD7F25E1EC4800EF23F4 /* URLString.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
+				EE11FDF125E355F600EF23F4 /* HelloMessage.swift in Sources */,
 				EEAE951A25DEF0BE008F0D1D /* SignInEmailViewController.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
 				EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */,
