@@ -27,6 +27,8 @@ protocol FlowerHomeDelegate: class {
 class FlowerHome: UIView {
     let percentageLabel = UILabel()
     let remainingLabel = UILabel()
+    let emptyImageView = UIImageView(image: UIImage(named: "ic_empty_flower")!)
+    let emptyLabel = UILabel()
     let activityButton = UIButton()
     
     weak var delegate: FlowerHomeDelegate?
@@ -46,6 +48,8 @@ class FlowerHome: UIView {
     func setupView() {
         setupPercentageLabel()
         setupRemainingLabel()
+        setupEmptyImageView()
+        setupEmptyLabel()
         setupActivityButton()
     }
     
@@ -57,6 +61,8 @@ class FlowerHome: UIView {
         }
         percentageLabel.attributedText = getFlowerPercentageText(color: UIColor(named: flower.color)!, title: flower.title, percent: flower.percent)
         remainingLabel.attributedText = getNotEmptyFlowerRemainingLabel(count: flower.remaining, color: UIColor(named: flower.color)!)
+        emptyLabel.removeFromSuperview()
+        emptyImageView.removeFromSuperview()
     }
     
     @objc func clickActivityButton(_ sender: UIButton) {
@@ -125,8 +131,8 @@ extension FlowerHome {
     func getNotEmptyFlowerRemainingLabel(count: Int, color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: "꽃 수확을 위해 \(count)번 더 실천하세요", attributes: [
             .font: UIFont.boldSystemFont(ofSize: 16),
-          .foregroundColor: UIColor(named: "grey03")!,
-          .kern: -0.16
+            .foregroundColor: UIColor(named: "grey03")!,
+            .kern: -0.16
         ])
         attributedString.addAttributes([
             .font: UIFont.boldSystemFont(ofSize: 16),
@@ -135,6 +141,35 @@ extension FlowerHome {
 
         return attributedString
     }
+    
+    // MARK: Empty ImageView
+    func setupEmptyImageView() {
+        self.addSubview(emptyImageView)
+        
+        emptyImageView.translatesAutoresizingMaskIntoConstraints = false
+        emptyImageView.widthAnchor.constraint(equalToConstant: 237).isActive = true
+        emptyImageView.heightAnchor.constraint(equalToConstant: 224).isActive = true
+        emptyImageView.topAnchor.constraint(equalTo: remainingLabel.bottomAnchor, constant: 19).isActive = true
+        emptyImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    // MARK: Empty Label
+    func setupEmptyLabel() {
+        emptyLabel.numberOfLines = 0
+        emptyLabel.textAlignment = .center
+        emptyLabel.attributedText = NSAttributedString(string: "꽃을 생성하고싶다면 환경보호\n활동을 실천해보세요", attributes: [
+            .font: UIFont.spoqaMedium(14),
+            .foregroundColor: UIColor(named: "grey02")!,
+            .kern: -0.14
+        ])
+        self.addSubview(emptyLabel)
+        
+        emptyLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyLabel.topAnchor.constraint(equalTo: emptyImageView.bottomAnchor, constant: 32).isActive = true
+        emptyLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    // MARK: Empty Label
     
     // MARK: Activity Button
     private func setupActivityButton() {
