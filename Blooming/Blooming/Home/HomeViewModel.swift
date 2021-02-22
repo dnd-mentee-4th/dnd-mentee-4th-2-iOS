@@ -10,6 +10,7 @@ import RxCocoa
 
 class HomeViewModel {
     private let disposeBag = DisposeBag()
+    var nickname = "(알수없음)"
     let input = Input()
     let output = Output()
     
@@ -54,6 +55,7 @@ class HomeViewModel {
             return
         }
         requestUserInfo(token: token).subscribe(onNext: { [weak self] value in
+            self?.nickname = value.nick ?? "(알수없음)"
             if value.error == nil { self?.output.loginStatus.accept(true) } else { self?.output.loginStatus.accept(false) }
         }).disposed(by: disposeBag)
     }

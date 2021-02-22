@@ -84,6 +84,31 @@ extension HomeViewController {
         flowerHome.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
     }
     
+    // MARK: Hello Message
+    func startHelloMessage(nick: String) {
+        helloMessage.setNickname(nick)
+        helloMessage.alpha = 0
+        self.view.addSubview(helloMessage)
+        
+        helloMessage.translatesAutoresizingMaskIntoConstraints = false
+        helloMessage.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+        helloMessage.heightAnchor.constraint(equalToConstant: 98).isActive = true
+        helloMessage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        helloMessage.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        
+        UIView.animate(withDuration: 1.5, animations: { [weak self] in
+            self?.helloMessage.alpha = 1.0
+        }, completion: { _ in
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { _ in
+                UIView.animate(withDuration: 1.0, animations: { [weak self] in
+                    self?.helloMessage.alpha = 0
+                }, completion: { [weak self] _ in
+                    self?.helloMessage.removeFromSuperview()
+                })
+            })
+        })
+    }
+    
     // MARK: Quiz Button (추가구현)
 //    func setupQuizButton() {
 //        quizButton.currentTime = getCurrentTime()

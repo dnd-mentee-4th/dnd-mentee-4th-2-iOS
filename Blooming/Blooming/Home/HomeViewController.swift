@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     let containerView = UIView()
     let logoutHome = LogoutHome()
     let flowerHome = FlowerHome()
+    lazy var helloMessage = HelloMessage()
     
     let viewModel = HomeViewModel()
     var selectedTabButtonIndex = 0
@@ -51,7 +52,7 @@ class HomeViewController: UIViewController {
             self?.currentLoginStatus = value
             if value {
                 self?.setupFlowerHome()
-                print("로그인되었습니다.")
+                self?.startHelloMessage(nick: self?.viewModel.nickname ?? "(알수없음)")
             } else { self?.setupLogoutHome() }
         }).disposed(by: disposeBag)
     }
