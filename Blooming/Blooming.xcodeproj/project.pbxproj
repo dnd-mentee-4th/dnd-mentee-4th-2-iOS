@@ -17,6 +17,7 @@
 		EE11FDC025E3417200EF23F4 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDBF25E3417200EF23F4 /* UserResponse.swift */; };
 		EE11FDC525E3444100EF23F4 /* MissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDC425E3444100EF23F4 /* MissionInfo.swift */; };
 		EE11FDCA25E3445200EF23F4 /* ActivityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */; };
+		EE11FDD025E344C500EF23F4 /* requestUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDCF25E344C500EF23F4 /* requestUserInfo.swift */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
 		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
 		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
@@ -76,6 +77,7 @@
 		EE11FDBF25E3417200EF23F4 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		EE11FDC425E3444100EF23F4 /* MissionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfo.swift; sourceTree = "<group>"; };
 		EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInfo.swift; sourceTree = "<group>"; };
+		EE11FDCF25E344C500EF23F4 /* requestUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestUserInfo.swift; sourceTree = "<group>"; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
 		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
@@ -150,8 +152,8 @@
 		EE11FD6725E1EB5A00EF23F4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EE11FDCE25E344AA00EF23F4 /* Requests */,
 				EE11FD6B25E1EB7500EF23F4 /* Model */,
-				EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */,
 				EE11FD7E25E1EC4800EF23F4 /* URLString.swift */,
 			);
 			path = Data;
@@ -167,6 +169,15 @@
 				EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EE11FDCE25E344AA00EF23F4 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */,
+				EE11FDCF25E344C500EF23F4 /* requestUserInfo.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		EE15321925C2E033008E471E /* Home */ = {
@@ -585,6 +596,7 @@
 				EE11FD6D25E1EBA400EF23F4 /* LoginBody.swift in Sources */,
 				EEECC7EB25D40FBF00C361CE /* FlowerHome.swift in Sources */,
 				EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */,
+				EE11FDD025E344C500EF23F4 /* requestUserInfo.swift in Sources */,
 				EE3D537925B298800064C274 /* HomeViewController.swift in Sources */,
 				EE3D537525B298800064C274 /* AppDelegate.swift in Sources */,
 				EEAE952B25DF584D008F0D1D /* SignInViewModel.swift in Sources */,
