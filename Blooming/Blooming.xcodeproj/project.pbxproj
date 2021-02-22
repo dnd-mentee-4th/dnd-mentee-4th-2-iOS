@@ -14,6 +14,9 @@
 		EE11FD7525E1EBAF00EF23F4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */; };
 		EE11FD7A25E1EC0100EF23F4 /* requestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */; };
 		EE11FD7F25E1EC4800EF23F4 /* URLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FD7E25E1EC4800EF23F4 /* URLString.swift */; };
+		EE11FDC025E3417200EF23F4 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDBF25E3417200EF23F4 /* UserResponse.swift */; };
+		EE11FDC525E3444100EF23F4 /* MissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDC425E3444100EF23F4 /* MissionInfo.swift */; };
+		EE11FDCA25E3445200EF23F4 /* ActivityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */; };
 		EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */; };
 		EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */; };
 		EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */; };
@@ -32,8 +35,8 @@
 		EEAE952B25DF584D008F0D1D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE952A25DF584D008F0D1D /* SignInViewModel.swift */; };
 		EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */; };
 		EEAE954425DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE954325DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift */; };
-		EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */; };
 		EEECC7EB25D40FBF00C361CE /* FlowerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */; };
+		EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */; };
 		EEEF8A5525CED53C00CFC0E5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */; };
 		EEEF8A7A25CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */; };
 		EEEF8A7B25CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */; };
@@ -70,6 +73,9 @@
 		EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		EE11FD7925E1EC0100EF23F4 /* requestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestLogin.swift; sourceTree = "<group>"; };
 		EE11FD7E25E1EC4800EF23F4 /* URLString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLString.swift; sourceTree = "<group>"; };
+		EE11FDBF25E3417200EF23F4 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		EE11FDC425E3444100EF23F4 /* MissionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfo.swift; sourceTree = "<group>"; };
+		EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInfo.swift; sourceTree = "<group>"; };
 		EE15325325C2F31F008E471E /* TabButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonCollectionCell.swift; sourceTree = "<group>"; };
 		EE3AE4C625C31F50008F6991 /* HomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE3AE4CB25C31F81008F6991 /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
@@ -94,8 +100,8 @@
 		EEAE952A25DF584D008F0D1D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		EEAE953B25DF627A008F0D1D /* SignInPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswordViewController.swift; sourceTree = "<group>"; };
 		EEAE954325DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInPasswordViewController+UI.swift"; sourceTree = "<group>"; };
-		EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHome.swift; sourceTree = "<group>"; };
 		EEECC7EA25D40FBF00C361CE /* FlowerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerHome.swift; sourceTree = "<group>"; };
+		EEEF8A3625CEB72D00CFC0E5 /* LogoutHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutHome.swift; sourceTree = "<group>"; };
 		EEEF8A5425CED53C00CFC0E5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		EEEF8A7725CEE97500CFC0E5 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
 		EEEF8A7825CEE97500CFC0E5 /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 			children = (
 				EE11FD6C25E1EBA400EF23F4 /* LoginBody.swift */,
 				EE11FD7425E1EBAF00EF23F4 /* LoginResponse.swift */,
+				EE11FDBF25E3417200EF23F4 /* UserResponse.swift */,
+				EE11FDC425E3444100EF23F4 /* MissionInfo.swift */,
+				EE11FDC925E3445200EF23F4 /* ActivityInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -582,13 +591,16 @@
 				EE8DFA8B25C50F600025EE54 /* CircleProgressBar.swift in Sources */,
 				EEEF8A3725CEB72D00CFC0E5 /* LogoutHome.swift in Sources */,
 				EEAE954425DF6B8F008F0D1D /* SignInPasswordViewController+UI.swift in Sources */,
+				EE11FDC525E3444100EF23F4 /* MissionInfo.swift in Sources */,
 				EE11FD7A25E1EC0100EF23F4 /* requestLogin.swift in Sources */,
+				EE11FDC025E3417200EF23F4 /* UserResponse.swift in Sources */,
 				EE11FD7F25E1EC4800EF23F4 /* URLString.swift in Sources */,
 				EE3D537725B298800064C274 /* SceneDelegate.swift in Sources */,
 				EE3AE4CC25C31F81008F6991 /* HomeViewController+UI.swift in Sources */,
 				EEAE951A25DEF0BE008F0D1D /* SignInEmailViewController.swift in Sources */,
 				EE15325425C2F31F008E471E /* TabButtonCollectionCell.swift in Sources */,
 				EEAE953C25DF627A008F0D1D /* SignInPasswordViewController.swift in Sources */,
+				EE11FDCA25E3445200EF23F4 /* ActivityInfo.swift in Sources */,
 				EEAE950B25DEE3FE008F0D1D /* CommonViewController.swift in Sources */,
 				EE11FD7525E1EBAF00EF23F4 /* LoginResponse.swift in Sources */,
 				EE3AE4C725C31F50008F6991 /* HomeViewController+Delegate.swift in Sources */,

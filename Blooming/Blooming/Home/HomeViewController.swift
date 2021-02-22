@@ -53,16 +53,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupView()
         bindViewModel()
-        checkLoginStatus()
-    }
-    
-    func checkLoginStatus() {
-        guard let token = UserDefaults.standard.string(forKey: "token") else {
-            flowerHome.removeFromSuperview()
-            setupLogoutHome()
-            return
-        }
-        // todo - 유저 정보 요청에 따라 뷰 설정
     }
     
     func setupView() {
