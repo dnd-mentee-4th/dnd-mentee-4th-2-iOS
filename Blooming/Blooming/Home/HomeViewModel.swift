@@ -28,25 +28,9 @@ class HomeViewModel {
     }
     
     init() {
-        input.eRecipt.subscribe(onNext: { [weak self] in
-            self?.requestFlowers(type: MissionType.eRecipt)
-        }).disposed(by: disposeBag)
-        input.multiUse.subscribe(onNext: { [weak self] in
-            self?.requestFlowers(type: MissionType.eRecipt)
-        }).disposed(by: disposeBag)
-        input.separateGarbage.subscribe(onNext: { [weak self] in
-            self?.requestFlowers(type: MissionType.eRecipt)
-        }).disposed(by: disposeBag)
-        input.waterSave.subscribe(onNext: { [weak self] in
-            self?.requestFlowers(type: MissionType.eRecipt)
-        }).disposed(by: disposeBag)
-        input.eco.subscribe(onNext: { [weak self] in
-            self?.requestFlowers(type: MissionType.eRecipt)
-        }).disposed(by: disposeBag)
-    }
-    
-    func requestFlowers(type: MissionType) {
-        // todo
+        Observable.of(input.eRecipt.asObservable(), input.multiUse.asObservable(), input.separateGarbage.asObservable(), input.waterSave.asObservable(), input.eco.asObservable()).merge().subscribe { _ in
+            // todo - 사용자 정보 요청 및 꽃 정보만 받아와서 output 해주기
+        }.disposed(by: disposeBag)
     }
     
     func requestLoginStatus() {
