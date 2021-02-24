@@ -55,6 +55,16 @@ class HomeViewController: UIViewController {
                 self?.startHelloMessage(nick: self?.viewModel.nickname ?? "(알수없음)")
             } else { self?.setupLogoutHome() }
         }).disposed(by: disposeBag)
+        
+        viewModel.output.flower.subscribe(onNext: { [weak self] flowers in
+            guard let self = self else {
+                print("HomeViewController - self가 없네요")
+                return
+            }
+            DispatchQueue.main.async {
+                self.flowerHome.setFlowerInfo(mission: missionTabItems[self.selectedTabButtonIndex], flower: flowers[self.selectedTabButtonIndex])
+            }
+        }).disposed(by: disposeBag)
     }
     
 }
