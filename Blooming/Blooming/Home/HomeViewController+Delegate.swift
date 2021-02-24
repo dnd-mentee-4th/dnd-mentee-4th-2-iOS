@@ -26,6 +26,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         missionTabItems[self.selectedTabButtonIndex].isSelected = false
         missionTabItems[indexPath.item].isSelected = true
+        self.viewModel.requestFlowers()
         
         self.selectedTabButtonIndex = indexPath.item
         // todo - 선택된 아이템에 따른 처리
