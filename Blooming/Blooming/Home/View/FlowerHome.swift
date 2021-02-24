@@ -8,12 +8,10 @@
 import UIKit
 
 struct Flower {
-    var title: String
     var score: Int
-    var color: String
     
     var percent: Int {
-        return Int(score/5 * 100)
+        return Int(score * 100/5)
     }
     var remaining: Int {
         return 5 - score
@@ -53,14 +51,17 @@ class FlowerHome: UIView {
         setupActivityButton()
     }
     
-    func setFlowerInfo(flower: Flower) {
+    func setFlowerInfo(mission: MissionTab, flower: Flower) {
+        print("꽃 정보 재설정")
         if flower.score == 0 {
-            percentageLabel.attributedText = getEmptyPercentageText(color: UIColor(named: flower.color)!)
+            setupEmptyImageView()
+            setupEmptyLabel()
+            percentageLabel.attributedText = getEmptyPercentageText(color: UIColor(named: mission.labelColor)!)
             remainingLabel.attributedText = getEmptyFlowerRemainingLabel()
             return
         }
-        percentageLabel.attributedText = getFlowerPercentageText(color: UIColor(named: flower.color)!, title: flower.title, percent: flower.percent)
-        remainingLabel.attributedText = getNotEmptyFlowerRemainingLabel(count: flower.remaining, color: UIColor(named: flower.color)!)
+        percentageLabel.attributedText = getFlowerPercentageText(color: UIColor(named: mission.labelColor)!, title: mission.title, percent: flower.percent)
+        remainingLabel.attributedText = getNotEmptyFlowerRemainingLabel(count: flower.remaining, color: UIColor(named: mission.labelColor)!)
         emptyLabel.removeFromSuperview()
         emptyImageView.removeFromSuperview()
     }
@@ -103,7 +104,7 @@ extension FlowerHome {
         attributedString.addAttributes([
             .font: UIFont.systemFont(ofSize: 28.0, weight: .semibold),
             .foregroundColor: color
-        ], range: NSRange(location: 7, length: String(percent).count + 1))
+        ], range: NSRange(location: title.count+4, length: String(percent).count + 1))
         
         return attributedString
     }
